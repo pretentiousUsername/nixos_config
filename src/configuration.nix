@@ -2,6 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
+# Eventually I'll be using imports to make this a bit nicer to work with.
+
 { config, pkgs, ... }:
 
 {
