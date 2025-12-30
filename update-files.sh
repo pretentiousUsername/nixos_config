@@ -1,18 +1,26 @@
 #!/bin/bash
 
-function list_files() {
-}
+# Add pulling and stuff later.
 
-function grab_files() {
-}
+set -e
 
-function place_files() {
-}
+# pushd ~/Projects/nixos_config/
 
-function build_system() {
-}
+if git diff --quiet '*.nix'; then
+    echo "No changes detected, exiting."
+    popd
+    exit 0
+fi
 
-function commit_changes() {
-}
+diffs=$(git diff --name-only src/)
+echo $diffs
 
+for f in $diffs; do echo "${f}"; done
 
+# popd
+
+# git add .
+# git commit
+# git push
+# 
+# sudo cp -a src/. /etc/nixos/

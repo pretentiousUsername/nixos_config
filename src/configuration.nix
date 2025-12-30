@@ -117,6 +117,7 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.neovim.defaultEditor = true;
 
   # enable dconf (for wpgtk)
   programs.dconf.enable = true;

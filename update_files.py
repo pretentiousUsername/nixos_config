@@ -1,5 +1,6 @@
 import os
 import argparse
+from filecmp import dircmp
 
 
 # Recursion hell
@@ -41,15 +42,14 @@ def list_files(path="."):  # path name is temporary
     return everything
 
 
-
-def grab_files():
-    ...
+def grab_files(files_here, files_there):
+    # files_here = list_files(files_here)
+    # files_there = list_files(files_there)
+    return dircmp(files_here, files_there)
 
 def build_system():
     ...
 
-def commit_changes():
-    ...
-
 # list_files()
-print(list_files("/etc/nixos"))
+# files = list_files(".")
+print(dircmp(".", "/etc/nixos/").common())
