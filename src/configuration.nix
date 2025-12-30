@@ -119,7 +119,6 @@
 
   # Install firefox.
   programs.firefox.enable = true;
-  programs.neovim.defaultEditor = true;
 
   # enable dconf (for wpgtk)
   programs.dconf.enable = true;
@@ -158,6 +157,9 @@
    # gcc
    # gdb
   ];
+
+  programs.neovim.enable = true;
+  programs.neovim.defaultEditor = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
