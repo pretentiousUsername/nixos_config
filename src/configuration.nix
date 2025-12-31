@@ -9,7 +9,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      <nixos-hardware/framework/13-inch/amd-ai-300-series>
+      ./hardware/framework-13-2025.nix
       ./hardware-configuration.nix
     ];
 
