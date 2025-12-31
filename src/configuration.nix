@@ -11,6 +11,7 @@
     [ # Include the results of the hardware scan.
       ./hardware/framework-13-2025.nix
       ./hardware-configuration.nix
+      ./experimental.nix
     ];
 
   # Bootloader.
