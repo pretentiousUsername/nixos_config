@@ -1,5 +1,7 @@
 { config, pkgs }:
 
 {
-    pkgs.discord.enable = true
+    packages = with pkgs; [
+        discord
+    ];
 };

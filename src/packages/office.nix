@@ -1,13 +1,13 @@
 { config, pkgs, ... }:
 
 {
-    packages = with pkgs; [
-      pandoc
-      texliveFull
-      anytype
-      zathura
-      lazygit
-      anytype
-    ];
-  };
-};
+    officePackages = {
+        packages = with pkgs; [
+            pandoc
+            texliveFull
+            anytype
+            zathura
+            anytype
+        ];
+    };
+}

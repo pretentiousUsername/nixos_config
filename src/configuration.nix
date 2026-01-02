@@ -98,23 +98,25 @@
     description = "pines";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      alacritty-graphics
-      pandoc
-      texliveFull
-      inter
-      stix-two
-      julia-mono
-      anytype
-      wpgtk
-      zathura
-      xfce.thunar
-      lazygit
-      neofetch  # lol
-      # supercollider
-      # supercolliderPlugins.sc3-plugins
-      # thunderbird
-      # python
-      # julia
+        alacritty-graphics
+        pandoc
+        haskellPackages.pandoc-crossref
+        texliveFull
+        inter
+        stix-two
+        julia-mono
+        anytype
+        wpgtk
+        zathura
+        xfce.thunar
+        lazygit
+        neofetch  # lol
+        # supercollider
+        # supercolliderPlugins.sc3-plugins
+        # thunderbird
+        # python
+        # julia
+        pywal16
     ];
   };
 

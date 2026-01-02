@@ -1,9 +1,9 @@
-{ config }:
+{ config, ... }:
 
 {
     nix = {
         settings = {
-            experimental-features = [ "nix-command" ];
+            experimental-features = [ "flakes" "nix-command" ];
         };
     };
-};
+}
