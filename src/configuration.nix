@@ -153,6 +153,7 @@
    curl
    tmux
    feh
+   xorg.xdpyinfo
    # xfce.thunar
 
    # version control
