@@ -60,6 +60,8 @@
     extraPackages = with pkgs; [
       i3lock
       rofi
+      feh
+      polybar
     ];
   };
 
@@ -117,6 +119,7 @@
         # python
         # julia
         pywal16
+        # wallust
     ];
   };
 
@@ -137,6 +140,7 @@
    killall
    neovim
    ranger
+   ueberzug
    fish
    polybar
    # rofi
