@@ -3,7 +3,7 @@
 # This is partially based on the No Boilerplate script.
 
 set -e
-pushd ~/Projects/dotfiles//nixos_config/
+pushd ~/Projects/dotfiles/nixos/
 
 git diff -U0 "*.nix"
 git add .
