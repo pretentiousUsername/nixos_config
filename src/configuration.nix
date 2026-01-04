@@ -153,6 +153,7 @@
    tmux
    btop
    networkmanagerapplet
+   adwaita-icon-theme
    # xfce.thunar
 
    # version control
