@@ -162,6 +162,7 @@
    btop
    networkmanagerapplet
    adwaita-icon-theme
+   compton
    # xfce.thunar
 
    # version control
