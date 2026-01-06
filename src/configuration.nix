@@ -72,6 +72,7 @@
        feh
        i3blocks
        dunst
+       i3status
        # polybar
      ];
    };
@@ -126,6 +127,7 @@
         neofetch  # lol
         audacity
         discord
+        lxappearance
         # supercollider
         # supercolliderPlugins.sc3-plugins
         # thunderbird
