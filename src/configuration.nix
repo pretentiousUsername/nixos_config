@@ -165,6 +165,7 @@
     wpgtk
     pywal16
     # xfce.thunar
+    xsecurelock
 
     # version control
     git
