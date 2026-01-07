@@ -120,7 +120,6 @@
         stix-two
         julia-mono
         anytype
-        wpgtk
         zathura
         xfce.thunar
         lazygit
@@ -150,35 +149,36 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-   wget
-   killall
-   neovim
-   ranger
-   ueberzug
-   fish
-   curl
-   tmux
-   btop
-   networkmanagerapplet
-   adwaita-icon-theme
-   compton
-   # xfce.thunar
+   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    killall
+    neovim
+    ranger
+    ueberzug
+    fish
+    curl
+    tmux
+    btop
+    networkmanagerapplet
+    adwaita-icon-theme
+    compton
+    wpgtk
+    # xfce.thunar
 
-   # version control
-   git
+    # version control
+    git
 
-   # # python
-   # python3
-   # python313Packages.pip
-   # python313Packages.virtualenv
-   # python313Packages.numpy
-   # python313Packages.scipy
-   # python313Packages.pandas
+    # # python
+    # python3
+    # python313Packages.pip
+    # python313Packages.virtualenv
+    # python313Packages.numpy
+    # python313Packages.scipy
+    # python313Packages.pandas
 
-   # # c/c++
-   # gcc
-   # gdb
+    # # c/c++
+    # gcc
+    # gdb
   ];
   
 
