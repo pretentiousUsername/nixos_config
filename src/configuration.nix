@@ -161,7 +161,7 @@
     btop
     networkmanagerapplet
     adwaita-icon-theme
-    compton
+    picom
     wpgtk
     # xfce.thunar
 
