@@ -163,6 +163,7 @@
     adwaita-icon-theme
     picom
     wpgtk
+    pywal16
     # xfce.thunar
 
     # version control
