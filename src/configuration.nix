@@ -66,15 +66,15 @@
 
    services.xserver.windowManager.i3 = {
      enable = true;
-     extraPackages = with pkgs; [
-       i3lock
-       rofi
-       feh
-       i3blocks
-       dunst
-       i3status
-       # polybar
-     ];
+     # extraPackages = with pkgs; [
+     #   i3lock
+     #   rofi
+     #   feh
+     #   i3blocks
+     #   dunst
+     #   i3status
+     #   # polybar
+     # ];
    };
 
   # Configure keymap in X11
@@ -181,6 +181,15 @@
     # # c/c++
     # gcc
     # gdb
+
+    i3
+    i3lock
+    rofi
+    feh
+    i3blocks
+    dunst
+    i3status
+    # polybar
   ];
   
 
