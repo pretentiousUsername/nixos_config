@@ -196,8 +196,8 @@
     i3status
     # polybar
 
-    pamixer
     pactl
+    pamixer
   ];
   
 
