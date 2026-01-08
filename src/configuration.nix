@@ -168,7 +168,7 @@
     btop
     networkmanagerapplet
     adwaita-icon-theme
-    picom
+    # picom
     wpgtk
     pywal16
     # xfce.thunar
@@ -231,6 +231,8 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
   services.gnome.gnome-keyring.enable = true;
+
+    services.picom.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
