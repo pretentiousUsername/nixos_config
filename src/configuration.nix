@@ -131,6 +131,7 @@
         audacity
         discord
         lxappearance
+        libreoffice
         # supercollider
         # supercolliderPlugins.sc3-plugins
         # thunderbird
