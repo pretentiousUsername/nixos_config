@@ -150,9 +150,6 @@
   ## enable xbacklight (why wasn't this enabled at the start?)
   # programs.xorg.xbacklight.enable = true;
 
-  # enable brightnessctl
-  programs.brightnessctl.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -204,6 +201,8 @@
 
     # pactl
     pamixer
+
+    brightnessctl
   ];
   
 
