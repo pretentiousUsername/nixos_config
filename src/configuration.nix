@@ -204,6 +204,8 @@
 
     brightnessctl
     xbacklight
+
+    evtest
   ];
   
 
