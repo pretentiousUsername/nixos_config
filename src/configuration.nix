@@ -212,6 +212,10 @@
 
     # required to make i3 get the media keys and stuff---it's quite handy
     xorg.xf86inputevdev
+
+    # i3 uses dex to run in its config file. I should check if that's necessary
+    # or not.
+    dex
   ];
   
 
