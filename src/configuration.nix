@@ -206,6 +206,7 @@
     xbacklight
 
     evtest
+    xev
   ];
   
 
