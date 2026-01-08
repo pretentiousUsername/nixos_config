@@ -180,7 +180,7 @@
     git
 
     # # python
-    # python3
+    python313
     # python313Packages.pip
     # python313Packages.virtualenv
     # python313Packages.numpy
