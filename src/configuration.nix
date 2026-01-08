@@ -170,7 +170,7 @@
     pywal16
     # xfce.thunar
     xsecurelock
-    xss-loc
+    xss-lock
 
     # version control
     git
