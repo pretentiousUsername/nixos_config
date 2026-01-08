@@ -203,6 +203,7 @@
     pamixer
 
     brightnessctl
+    xbacklight
   ];
   
 
