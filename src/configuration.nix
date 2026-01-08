@@ -197,7 +197,8 @@
     feh
     i3blocks
     dunst
-    i3status
+    # i3status
+    i3status-rust
     # polybar
 
     # pactl
