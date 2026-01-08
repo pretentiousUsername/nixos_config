@@ -218,6 +218,8 @@
     # i3 uses dex to run in its config file. I should check if that's necessary
     # or not.
     dex
+    
+    xarchiver
   ];
   
 
