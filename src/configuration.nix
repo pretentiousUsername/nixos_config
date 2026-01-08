@@ -195,6 +195,9 @@
     dunst
     i3status
     # polybar
+
+    pamixer
+    pactl
   ];
   
 
