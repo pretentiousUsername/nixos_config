@@ -77,6 +77,10 @@
      # ];
    };
 
+  xdg = {
+    autostart.enable = true;
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -166,6 +170,7 @@
     pywal16
     # xfce.thunar
     xsecurelock
+    xss-loc
 
     # version control
     git
