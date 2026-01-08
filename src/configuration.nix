@@ -147,6 +147,9 @@
   # enable dconf (for wpgtk)
   programs.dconf.enable = true;
 
+  # enable xbacklight (why wasn't this enabled at the start?)
+  programs.xbacklight.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
