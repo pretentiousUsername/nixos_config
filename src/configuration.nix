@@ -207,6 +207,8 @@
 
     evtest
     xev
+
+    xmodmap
   ];
   
 
