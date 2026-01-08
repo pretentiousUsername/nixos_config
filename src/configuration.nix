@@ -147,8 +147,11 @@
   # enable dconf (for wpgtk)
   programs.dconf.enable = true;
 
-  # enable xbacklight (why wasn't this enabled at the start?)
-  programs.xbacklight.enable = true;
+  ## enable xbacklight (why wasn't this enabled at the start?)
+  # programs.xorg.xbacklight.enable = true;
+
+  # enable brightnessctl
+  programs.brightnessctl.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
