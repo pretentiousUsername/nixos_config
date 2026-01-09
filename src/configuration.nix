@@ -71,7 +71,6 @@
             i3blocks
             i3status
             ];
-        configFile = "$HOME/.config/i3/config";
     };
 
     # Enable the KDE Plasma Desktop Environment.
