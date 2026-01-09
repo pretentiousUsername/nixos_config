@@ -78,10 +78,6 @@
      desktopManager.plasma6.enable = true;
   };
 
-
-
-
-
   xdg = {
     autostart.enable = true;
   };
@@ -250,7 +246,7 @@
     #     enableAskPassword = true;
     # };
   services.gnome.gnome-keyring.enable = true;
-  systemd.user.sessionVariables.SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh"
+  systemd.user.sessionVariables.SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
 
     # services.picom.enable = true;
 
