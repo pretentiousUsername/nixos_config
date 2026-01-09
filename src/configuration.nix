@@ -141,6 +141,9 @@
         # pywal16
         # wallust
     ];
+    openssh.authorizedKeys.keyFiles = [
+        /home/pines/.ssh/framework13_2025.pub
+    ];
   };
 
   # Install firefox.
@@ -246,7 +249,7 @@
     #     enableAskPassword = true;
     # };
   services.gnome.gnome-keyring.enable = true;
-  systemd.user.sessionVariables.SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
+  # systemd.user.sessionVariables.SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
 
     # services.picom.enable = true;
 
