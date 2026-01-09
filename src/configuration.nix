@@ -58,7 +58,23 @@
         # Lightdm and i3 do not get along for some reason.
         lightdm = {
             enable = true;
-            greeters.gtk.enable = true;
+            greeters.gtk = {
+                enable = true;
+                indicators = [
+                    "~host"
+                    "~spacer"
+                    "~clock"
+                    "~session"
+                    "~spacer"
+                    "~a11y"
+                    "~power"
+                ];
+                cursorTheme.size = 32;
+                extraConfig = ''
+                    font-name=monospace
+                    background=/home/pines/Pictures/Wallpapers/1678704649268102.png
+                '';
+            };
             greeters.slick = {
                 enable = false;
             };
