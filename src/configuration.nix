@@ -53,9 +53,9 @@
   services.xserver = {
     enable = true;
     displayManager = {
-        sddm.enable = true;
+        sddm.enable = false;
         lightdm = {
-            enable = false;
+            enable = true;
             greeters.gtk.enable = false;
             greeters.slick = {
                 enable = true;
@@ -70,7 +70,7 @@
             i3lock
             i3blocks
             i3status
-            ];
+        ];
     };
 
     # Enable the KDE Plasma Desktop Environment.
