@@ -53,9 +53,9 @@
   services.xserver = {
     enable = true;
     displayManager = {
-        sddm.enable = false;
+        sddm.enable = true;
         lightdm = {
-            enable = true;
+            enable = false;
             greeters.gtk.enable = false;
             greeters.slick = {
                 enable = true;
