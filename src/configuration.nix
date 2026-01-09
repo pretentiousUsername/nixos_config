@@ -64,15 +64,16 @@
                     "~host"
                     "~spacer"
                     "~clock"
-                    "~session"
                     "~spacer"
+                    "~session"
                     "~a11y"
                     "~power"
                 ];
                 cursorTheme.size = 32;
                 extraConfig = ''
-                    font-name=monospace
-                    background=/home/pines/Pictures/Wallpapers/1678704649268102.png
+                    font-name = monospace
+                    user-background = true
+                    background = /home/pines/Pictures/Wallpapers/1678704649268102.png
                 '';
             };
             greeters.slick = {
