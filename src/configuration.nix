@@ -240,7 +240,7 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  programs.ssh.startAgnet = true;
+  programs.ssh.startAgent = true;
   services.gnome.gnome-keyring.enable = true;
 
     # services.picom.enable = true;
