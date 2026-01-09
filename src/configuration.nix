@@ -74,8 +74,8 @@
         configFile = "~/.config/i3/config";
     };
 
-        # Enable the KDE Plasma Desktop Environment.
-        services.desktopManager.plasma6.enable = true;
+    # Enable the KDE Plasma Desktop Environment.
+     desktopManager.plasma6.enable = true;
   };
 
 
