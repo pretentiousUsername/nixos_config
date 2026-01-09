@@ -243,6 +243,7 @@
     
     xarchiver
     xclip
+    themix-gui
   ];
   
 
