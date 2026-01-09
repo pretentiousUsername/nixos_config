@@ -53,6 +53,16 @@
   services.xserver = {
           enable = true;
 
+        windowManager.i3 = {
+          enable = true;
+          extraPackages = with pkgs; [
+            i3status-rust
+            i3lock
+            i3blocks
+            i3status
+          ];
+        };
+
           # Enable the KDE Plasma Desktop Environment.
     };
     services.displayManager = {
@@ -70,15 +80,6 @@
 
     services.desktopManager.plasma6.enable = true;
 
-   services.xserver.windowManager.i3 = {
-     enable = true;
-     extraPackages = with pkgs; [
-       i3status-rust
-       i3lock
-       i3blocks
-       i3status
-     ];
-   };
 
   xdg = {
     autostart.enable = true;
