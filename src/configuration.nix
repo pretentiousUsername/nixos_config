@@ -53,16 +53,21 @@
           enable = true;
 
           # Enable the KDE Plasma Desktop Environment.
-          displayManager.sddm.enable = false;
-          displayManager.lightdm = {
+    };
+    services.displayManager = {
+          sddm.enable = false;
+          lightdm = {
               enable = true;
               greeters.gtk.enable = false;
               greeters.slick = {
                   enable = true;
               };
           };
-          desktopManager.plasma6.enable = true;
     };
+
+
+
+    services.desktopManager.plasma6.enable = true;
 
    services.xserver.windowManager.i3 = {
      enable = true;
