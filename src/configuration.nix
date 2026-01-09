@@ -242,7 +242,7 @@
   # services.openssh.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
-    services.picom.enable = true;
+    # services.picom.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
