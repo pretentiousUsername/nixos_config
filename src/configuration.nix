@@ -66,15 +66,12 @@
 
    services.xserver.windowManager.i3 = {
      enable = true;
-     # extraPackages = with pkgs; [
-     #   i3lock
-     #   rofi
-     #   feh
-     #   i3blocks
-     #   dunst
-     #   i3status
-     #   # polybar
-     # ];
+     extraPackages = with pkgs; [
+       i3status-rust
+       i3lock
+       i3blocks
+       i3status
+     ];
    };
 
   xdg = {
@@ -191,14 +188,14 @@
     # gcc
     # gdb
 
-    i3
-    i3lock
+    # i3
+    # i3lock
     rofi
     feh
-    i3blocks
+    # i3blocks
     dunst
     # i3status
-    i3status-rust
+    # i3status-rust
     # polybar
 
     # pactl
@@ -207,7 +204,7 @@
     brightnessctl
     xbacklight
 
-    evtest
+    # evtest
     xev
 
     # xmodmap
