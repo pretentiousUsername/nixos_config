@@ -141,9 +141,9 @@
         # pywal16
         # wallust
     ];
-    openssh.authorizedKeys.authorizedKeys.keyFiles = [
-        /home/pines/.ssh/framework13_2025.pub
-    ];
+    # openssh.authorizedKeys.authorizedKeys.keyFiles = [
+    #     /home/pines/.ssh/framework13_2025.pub
+    # ];
   };
 
   # Install firefox.
