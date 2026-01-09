@@ -53,10 +53,11 @@
   services.xserver = {
     enable = true;
     displayManager = {
-        sddm.enable = true;
+        defaultSession = "none+i3";
+        sddm.enable = false;
         # Lightdm and i3 do not get along for some reason.
         lightdm = {
-            enable = false;
+            enable = true;
             greeters.gtk.enable = false;
             greeters.slick = {
                 enable = true;
