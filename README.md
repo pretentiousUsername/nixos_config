@@ -7,3 +7,5 @@ If you need this to run on your system, you will need to create a symlink
 between your hardware configuration in the `/etc/nixos` directory and `src/`
 in this directory. I did this in order to make sure that my configuration is
 essentially hardware-agnostic.
+
+<!--Right now I'm just trying to see if git will sign this.-->
