@@ -141,7 +141,7 @@
         # pywal16
         # wallust
     ];
-    openssh.authorizedKeys.keyFiles = [
+    openssh.authorizedKeys.authorizedKeys.keyFiles = [
         /home/pines/.ssh/framework13_2025.pub
     ];
   };
