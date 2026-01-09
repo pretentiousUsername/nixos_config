@@ -58,9 +58,9 @@
         # Lightdm and i3 do not get along for some reason.
         lightdm = {
             enable = true;
-            greeters.gtk.enable = false;
+            greeters.gtk.enable = true;
             greeters.slick = {
-                enable = true;
+                enable = false;
             };
         };
     };
