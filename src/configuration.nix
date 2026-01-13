@@ -151,6 +151,7 @@
         discord
         lxappearance
         libreoffice
+        cheese
         # supercollider
         # supercolliderPlugins.sc3-plugins
         # thunderbird
@@ -244,6 +245,8 @@
     xarchiver
     xclip
     themix-gui
+
+    gparted
   ];
   
 
