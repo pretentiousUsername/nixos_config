@@ -139,7 +139,7 @@
         pandoc
         haskellPackages.pandoc-crossref
         texliveFull
-        texlivePackages.revtex
+        # texlivePackages.revtex
         inter
         stix-two
         julia-mono
