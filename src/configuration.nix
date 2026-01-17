@@ -161,13 +161,13 @@
         # pywal16
         # wallust
         flameshot
-        python3.withPackages(pypkgs: with pypkgs; [
+        (python3.withPackages(pypkgs: with pypkgs; [
             numpy
             pandas
             matplotlib
             scipy
             pywavelets
-        ])
+        ]))
     ];
     # openssh.authorizedKeys.authorizedKeys.keyFiles = [
     #     /home/pines/.ssh/framework13_2025.pub
