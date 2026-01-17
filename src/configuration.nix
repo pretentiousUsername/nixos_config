@@ -143,7 +143,7 @@
         inter
         stix-two
         julia-mono
-        anytype
+        # anytype
         zathura
         xfce.thunar
         lazygit
@@ -248,6 +248,11 @@
     themix-gui
 
     gparted
+
+
+    # for notes and stuff---i'm just trying to see if this will work, since it
+    # wasn't working in the user packages
+    anytype
   ];
   
 
