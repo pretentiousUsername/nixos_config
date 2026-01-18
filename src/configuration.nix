@@ -289,6 +289,8 @@
     #     enableAskPassword = true;
     # };
   services.gnome.gnome-keyring.enable = true;
+
+  nix.settings.trusted-users = [ "root" "pines" ];
   # systemd.user.sessionVariables.SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
 
     # services.picom.enable = true;
