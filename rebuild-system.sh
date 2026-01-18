@@ -89,4 +89,6 @@ while getopts "udh" option; do
     no_args="false"
 done
 
+# This just rebuilds the system if no options are present. I blame bash's syntax
+# for this.
 [[ "$no_args" == "true" ]] && { rebuild; exit 0; }
