@@ -153,8 +153,8 @@
         lxappearance
         libreoffice
         cheese
-        # supercollider
-        # supercolliderPlugins.sc3-plugins
+        supercollider
+        supercolliderPlugins.sc3-plugins
         # thunderbird
         # python
         # julia
@@ -162,9 +162,6 @@
         # wallust
         flameshot
     ];
-    # openssh.authorizedKeys.authorizedKeys.keyFiles = [
-    #     /home/pines/.ssh/framework13_2025.pub
-    # ];
   };
 
   # Install firefox.
@@ -194,12 +191,12 @@
     btop
     networkmanagerapplet
     adwaita-icon-theme
-    # picom
     wpgtk
     pywal16
-    # xfce.thunar
     xsecurelock
     xss-lock
+
+    devenv
 
     # version control
     git
