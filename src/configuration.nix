@@ -197,6 +197,7 @@
     xss-lock
 
     devenv
+    direnv
 
     # version control
     git
