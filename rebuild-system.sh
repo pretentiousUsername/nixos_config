@@ -33,7 +33,7 @@ upgrade() {
     
     git diff -U0 "*.nix"
     git add .
-    echo "Rebuilding NixOs."
+    echo "Rebuilding and upgrading NixOs."
     sudo nixos-rebuild switch --upgrade -I nixos-config=src/configuration.nix \
         &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
     
@@ -55,9 +55,17 @@ collect_garbage() {
     sudo nix-collect-garbage -d --delete-older-than 7d
 }
 
+usage() {
+    echo "using rebuild-system"
+    echo "-h    show this help"
+    echo "-*    rebuild the system without updating packages"
+    echo "-u    rebuild and upgrade the operating system"
+    echo "-d    remove all packages older than one week old"
+}
+
 no_args="true"
 
-while getopts "ud" option; do
+while getopts "udh" option; do
     case "$option" in 
         u) # upgrade packages
             upgrade
@@ -68,6 +76,9 @@ while getopts "ud" option; do
             collect_garbage
             # echo "yes";
             exit 0
+            ;;
+        h) # show help
+            usage
             ;;
         *) # rebuild system
             # rebuild
