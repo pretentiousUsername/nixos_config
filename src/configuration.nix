@@ -197,7 +197,6 @@
     xss-lock
 
     devenv
-    direnv
 
     # version control
     git
@@ -264,6 +263,8 @@
 
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
+
+  programs.direnv.enable = true;
 
 
   # Some programs need SUID wrappers, can be configured further or are
