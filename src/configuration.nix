@@ -265,6 +265,10 @@
   programs.neovim.defaultEditor = true;
 
   programs.direnv.enable = true;
+  programs.bash.interactiveShellInit =
+    ''
+    eval "$(direnv hook bash)"
+    '';
 
 
   # Some programs need SUID wrappers, can be configured further or are
