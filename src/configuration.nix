@@ -161,6 +161,7 @@
         # pywal16
         # wallust
         flameshot
+        hugo
     ];
   };
 
