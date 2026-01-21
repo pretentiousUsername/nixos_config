@@ -162,6 +162,11 @@
         # wallust
         flameshot
         hugo
+
+        # CAD stuff
+        kicad
+        freecad
+        elmerfem
     ];
   };
 
