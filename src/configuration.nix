@@ -167,6 +167,9 @@
         kicad
         freecad
         elmerfem
+
+        gimp
+        inkscape
     ];
   };
 
