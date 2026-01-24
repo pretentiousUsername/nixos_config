@@ -149,6 +149,7 @@
         lazygit
         neofetch  # lol
         audacity
+        audacious
         discord
         lxappearance
         libreoffice
