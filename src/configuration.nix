@@ -256,6 +256,9 @@
     themix-gui
 
     gparted
+    
+    # printing drivers
+    hplip
 
 
     # # for notes and stuff---i'm just trying to see if this will work, since it
