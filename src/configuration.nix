@@ -200,6 +200,7 @@
     tmux
     btop
     networkmanagerapplet
+    wireguard-tools
     adwaita-icon-theme
     wpgtk
     pywal16
