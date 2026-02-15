@@ -163,6 +163,7 @@
         # wallust
         flameshot
         hugo
+        fzf
 
         # CAD stuff
         kicad
