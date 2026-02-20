@@ -137,6 +137,7 @@
     packages = with pkgs; [
         alacritty-graphics
         pandoc
+        zotero
         haskellPackages.pandoc-crossref
         texliveFull
         typst
