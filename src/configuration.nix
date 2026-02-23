@@ -209,6 +209,7 @@
     xsecurelock
     xss-lock
     atool
+    gzip
 
     devenv
 
