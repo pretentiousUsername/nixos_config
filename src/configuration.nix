@@ -211,6 +211,7 @@
     atool
     gzip
     unzip
+    pauvolumecontrol
 
     devenv
 
