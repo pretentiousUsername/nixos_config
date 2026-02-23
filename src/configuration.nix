@@ -208,6 +208,7 @@
     pywal16
     xsecurelock
     xss-lock
+    atool
 
     devenv
 
