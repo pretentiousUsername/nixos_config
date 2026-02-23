@@ -20,7 +20,7 @@
         "monitor.alsa.properties" = {
             "alsa.use-ucm" = false;
         };
-    }
+    };
 
-    services.xserver.libinput.touchpad.disableWhileType = true;
+    services.xserver.libinput.touchpad.disableWhileTyping = true;
 }
