@@ -1,4 +1,4 @@
-{ config, hardware, ... }:
+{ config, hardware, services, ... }:
 
 {
     imports = [
@@ -14,9 +14,13 @@
         MANWIDTH = 80;
     };
 
+    # ALSA UCM prevents the microphone from working on Framework laptops for
+    # some reason. (See <https://github.com/NixOS/nixos-hardware/issues/1603>.)
     services.pipewire.wireplumbler.extraConfig.no-ucm = {
         "monitor.alsa.properties" = {
             "alsa.use-ucm" = false;
         };
     }
+
+    services.xserver.libinput.touchpad.disableWhileType = true;
 }
