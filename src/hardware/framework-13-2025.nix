@@ -23,4 +23,5 @@
     };
 
     services.xserver.libinput.touchpad.disableWhileTyping = true;
+    services.fwupd.enable = true;
 }
