@@ -211,7 +211,6 @@
     atool
     gzip
     unzip
-    pauvolumecontrol
 
     devenv
 
@@ -242,6 +241,7 @@
 
     # pactl
     pamixer
+    pavucontrol
 
     brightnessctl
     xbacklight
