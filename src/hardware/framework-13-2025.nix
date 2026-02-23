@@ -16,7 +16,7 @@
 
     # ALSA UCM prevents the microphone from working on Framework laptops for
     # some reason. (See <https://github.com/NixOS/nixos-hardware/issues/1603>.)
-    services.pipewire.wireplumbler.extraConfig.no-ucm = {
+    services.pipewire.wireplumber.extraConfig.no-ucm = {
         "monitor.alsa.properties" = {
             "alsa.use-ucm" = false;
         };
