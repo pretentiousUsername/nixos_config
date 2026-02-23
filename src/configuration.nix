@@ -210,6 +210,7 @@
     xss-lock
     atool
     gzip
+    unzip
 
     devenv
 
