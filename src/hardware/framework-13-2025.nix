@@ -13,4 +13,10 @@
         _JAVA_OPTIONS = "-Dsun.java2d.uiscale=1.25";
         MANWIDTH = 80;
     };
+
+    services.pipewire.wireplumbler.extraConfig.no-ucm = {
+        "monitor.alsa.properties" = {
+            "alsa.use-ucm" = false;
+        };
+    }
 }
