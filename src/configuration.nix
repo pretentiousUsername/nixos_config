@@ -177,6 +177,13 @@
 
         gimp
         inkscape
+
+        # lsp stuff
+        ## python
+        ruff
+        pyright
+        ## lua
+        luajitPackages.lua-lsp
     ];
   };
 
