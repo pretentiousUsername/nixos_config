@@ -157,6 +157,7 @@
         cheese
         supercollider
         supercolliderPlugins.sc3-plugins
+        vimPlugins.nvim-treesitter
         # thunderbird
         # python
         # julia
