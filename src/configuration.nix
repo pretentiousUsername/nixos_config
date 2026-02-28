@@ -168,6 +168,7 @@
         flameshot
         hugo
         fzf
+        gcc
 
         # CAD stuff
         kicad
