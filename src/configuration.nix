@@ -159,6 +159,7 @@
         supercolliderPlugins.sc3-plugins
         vimPlugins.nvim-treesitter
         lua
+        luajit
         luarocks  # necessary for my neovim config
         # thunderbird
         # python
