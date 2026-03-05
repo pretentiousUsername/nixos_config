@@ -1,0 +1,7 @@
+/home/pines/Projects/.devenv/flake.json
+/home/pines/Projects/.devenv.flake.nix
+/home/pines/Projects/.env
+/home/pines/Projects/devenv.local.nix
+/home/pines/Projects/devenv.lock
+/home/pines/Projects/devenv.nix
+/home/pines/Projects/devenv.yaml
