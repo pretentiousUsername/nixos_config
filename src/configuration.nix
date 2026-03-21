@@ -145,6 +145,7 @@
         stix-two
         julia-mono
         anytype
+        logseq
         zathura
         xfce.thunar
         lazygit
