@@ -20,7 +20,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "superfluid"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -53,8 +52,6 @@
   services.xserver = {
     enable = true;
     displayManager = {
-        defaultSession = "none+i3";
-        sddm.enable = false;
         # Lightdm and i3 do not get along for some reason.
         lightdm = {
             enable = true;
@@ -93,8 +90,15 @@
     };
 
     # Enable the KDE Plasma Desktop Environment.
-     desktopManager.plasma6.enable = true;
+
   };
+
+  services.displayManager = {
+        defaultSession = "none+i3";
+        sddm.enable = false;
+  };
+
+  services.desktopManager.plasma6.enable = true;
 
   xdg = {
     autostart.enable = true;

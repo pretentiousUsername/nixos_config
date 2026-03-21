@@ -1,9 +1,11 @@
-{ config, hardware, services, ... }:
+{ config, networking, hardware, services, ... }:
 
 {
     imports = [
         <nixos-hardware/framework/13-inch/amd-ai-300-series>
     ];
+
+    networking.hostName = "superfluid"; # Define your hostname.
 
     environment.variables = {
         GDK_SCALE = "1.25";
@@ -22,6 +24,6 @@
         };
     };
 
-    services.xserver.libinput.touchpad.disableWhileTyping = true;
+    services.libinput.touchpad.disableWhileTyping = true;
     services.fwupd.enable = true;
 }
