@@ -206,6 +206,7 @@
     wget
     killall
     xrandr
+    arandr
     neovim
     ranger
     ueberzug
