@@ -148,6 +148,8 @@
         inter
         stix-two
         julia-mono
+        corefonts
+        vista-fonts
         anytype
         logseq
         zathura
