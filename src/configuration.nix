@@ -186,6 +186,8 @@
         gimp
         inkscape
         decker
+
+        # ungoogled-chromium
     ];
   };
 
