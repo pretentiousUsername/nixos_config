@@ -173,6 +173,8 @@
         # julia
         # pywal16
         # wallust
+        imagemagick
+        ghostscript
         flameshot
         hugo
         fzf
