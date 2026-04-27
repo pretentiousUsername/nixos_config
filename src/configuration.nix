@@ -175,6 +175,7 @@
         # wallust
         imagemagick
         ghostscript
+        poppler-utils
         flameshot
         hugo
         fzf
