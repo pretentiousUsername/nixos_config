@@ -15,8 +15,10 @@
       ./experimental.nix
       ./fonts.nix
       "${builtins.fetchTarball "https://github.com/ryantm/agenix/archive/main.tar.gz"}/modules/age.nix"  # not pretty, but it should work
+      <musnix>
     ];
-  # musnix.enable = true;
+
+  musnix.enable = true;  # this should make audio work nicely
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -242,6 +244,7 @@
     gzip
     zip
     unzip
+    qjackctl
 
     devenv
 
