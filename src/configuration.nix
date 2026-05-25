@@ -14,8 +14,9 @@
       ./hardware-configuration.nix
       ./experimental.nix
       ./fonts.nix
+      "${builtins.fetchTarball "https://github.com/ryantm/agenix/archive/main.tar.gz"}/modules/age.nix"  # not pretty, but it should work
     ];
-
+  # musnix.enable = true;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -133,11 +134,17 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # Enable/configure Synthing
+  # services.syncthing = {
+  #   enable = true;
+  #   openDefaultPorts = true;
+  # };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pines = {
     isNormalUser = true;
     description = "pines";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
     packages = with pkgs; [
         alacritty-graphics
         pandoc
@@ -199,6 +206,9 @@
 
   # enable dconf (for wpgtk)
   programs.dconf.enable = true;
+
+  # enable flatpak (for Logseq)
+  # services.flatpak.enable = true;
 
   ## enable xbacklight (why wasn't this enabled at the start?)
   # programs.xorg.xbacklight.enable = true;
@@ -306,6 +316,8 @@
     pyright
     ## lua
     luajitPackages.lua-lsp
+
+    # niv  # manage nix dependencies
   ];
   
 

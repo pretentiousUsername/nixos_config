@@ -9,3 +9,7 @@ in this directory. I did this in order to make sure that my configuration is
 essentially hardware-agnostic.
 
 <!--Right now I'm just trying to see if git will sign this.-->
+
+## Channels
++ [NixOS Hardware](https://github.com/NixOS/nixos-hardware)
++ [Musnix](https://github.com/musnix/musnix)
