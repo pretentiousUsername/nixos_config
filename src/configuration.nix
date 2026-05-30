@@ -172,6 +172,9 @@
         libreoffice
         cheese
         supercollider-with-plugins
+        qtbase
+        qttools
+        qtwebsockets
         # supercollider
         # supercolliderPlugins.sc3-plugins
         vimPlugins.nvim-treesitter
