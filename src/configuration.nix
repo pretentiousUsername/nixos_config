@@ -171,8 +171,9 @@
         lxappearance
         libreoffice
         cheese
-        supercollider
-        supercolliderPlugins.sc3-plugins
+        supercollider-with-plugins
+        # supercollider
+        # supercolliderPlugins.sc3-plugins
         vimPlugins.nvim-treesitter
         lua
         luajit
