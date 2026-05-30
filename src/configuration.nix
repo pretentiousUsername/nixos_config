@@ -148,6 +148,9 @@
     description = "pines";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     packages = with pkgs; [
+        nixpkgs-fmt
+        nixpkgs-lint
+        nixpkgs-review
         alacritty-graphics
         pandoc
         zotero
@@ -172,9 +175,9 @@
         libreoffice
         cheese
         supercollider-with-plugins
-        qt5.qtbase
-        qt5.qttools
-        qt5.qtwebsockets
+        qt6.qtbase
+        qt6.qttools
+        qt6.qtwebsockets
         # supercollider
         # supercolliderPlugins.sc3-plugins
         vimPlugins.nvim-treesitter
