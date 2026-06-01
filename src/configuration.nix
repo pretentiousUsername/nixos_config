@@ -163,7 +163,7 @@
         corefonts
         vista-fonts
         anytype
-        logseq
+        # logseq  # it uses an insecure electron version?
         zathura
         xfce.thunar
         lazygit
