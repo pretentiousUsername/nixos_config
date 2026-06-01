@@ -167,7 +167,7 @@
         zathura
         xfce.thunar
         lazygit
-        neofetch  # lol
+        hyfetch  # yep
         audacity
         audacious
         discord
