@@ -53,6 +53,7 @@ upgrade() {
 
 collect_garbage() {
     sudo nix-collect-garbage -d --delete-older-than 7d
+    sudo nix-collect-garbage
 }
 
 usage() {
