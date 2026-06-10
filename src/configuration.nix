@@ -246,7 +246,6 @@
     adwaita-icon-theme
     wpgtk
     pywal16
-    xsecurelock
     xss-lock
     atool
     gzip
