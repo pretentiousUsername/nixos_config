@@ -206,7 +206,7 @@
         gimp
         inkscape
         decker
-
+        deja-dup
         # ungoogled-chromium
     ];
   };
