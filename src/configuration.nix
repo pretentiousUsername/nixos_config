@@ -14,8 +14,7 @@
       ./hardware-configuration.nix
       ./experimental.nix
       ./fonts.nix
-      "${builtins.fetchTarball "https://github.com/ryantm/agenix/archive/main.tar.gz"}/modules/age.nix"  # not pretty, but it should work
-      <musnix>
+      inputs.musnix.nixosModules.musnix
       ./services/sops.nix
     ];
 

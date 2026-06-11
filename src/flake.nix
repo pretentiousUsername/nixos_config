@@ -14,6 +14,10 @@
         url = "github:NixOS/nixos-hardware";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    musnix = {
+        url = "github:musnix/musnix";
+    };
   };
 
   outputs = { self, nixpkgs, ... } @ inputs:
@@ -26,9 +30,10 @@
             superfluid = nixpkgs.lib.nixosSystem {
                 specialArgs = { inherit inputs; };
                 modules = [
-                    inputs.muxnix.nixosModules.muxnix
+                    inputs.nixos-hardware.framework-amd-ai-300-series
+                    inputs.musnix.nixosModules.musnix
+                    ./hardware/superfluid.nix
                     ./configuration.nix
-                    inputs.nixos-hardware.framework-13-inch-amd-ai-300-series
                 ];
             };
         };
