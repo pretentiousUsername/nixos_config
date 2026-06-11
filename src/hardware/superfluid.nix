@@ -2,7 +2,7 @@
 
 {
     imports = [
-        inputs.nixos-hardware.framework-13-inch-amd-ai-300-series
+        inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
     ];
 
     networking.hostName = "superfluid"; # Define your hostname.

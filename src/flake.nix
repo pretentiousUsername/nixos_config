@@ -30,7 +30,7 @@
             superfluid = nixpkgs.lib.nixosSystem {
                 specialArgs = { inherit inputs; };
                 modules = [
-                    inputs.nixos-hardware.framework-amd-ai-300-series
+                    inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
                     inputs.musnix.nixosModules.musnix
                     ./hardware/superfluid.nix
                     ./configuration.nix
