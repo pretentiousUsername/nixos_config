@@ -1,4 +1,4 @@
-{ config, networking, hardware, services, ... }:
+{ config, networking, hardware, services, inputs, ... }:
 
 {
     imports = [
