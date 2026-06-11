@@ -32,7 +32,7 @@
                 modules = [
                     inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
                     inputs.musnix.nixosModules.musnix
-                    ./hardware/superfluid.nix
+                    ./hardware/superfluid/superfluid.nix
                     ./configuration.nix
                 ];
             };
