@@ -89,9 +89,12 @@ while getopts "udh" option; do
         h) # show help
             usage
             ;;
+        o)
+            optimize
+            ;;
         *) # rebuild system
             # rebuild
-            echo "maybe";
+            # echo "maybe";
             exit 0
             ;;
     esac
