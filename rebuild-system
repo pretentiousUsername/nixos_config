@@ -58,12 +58,18 @@ collect_garbage() {
     sudo nix-collect-garbage
 }
 
+optimize () {
+    sudo nix-store --optimise
+}
+
 usage() {
     echo "using rebuild-system"
     echo "-h    show this help"
     echo "-*    rebuild the system without updating packages"
-    echo "-u    rebuild and upgrade the operating system"
-    echo "-d    remove all packages older than one week old"
+    echo "-d    remove all unnecessary packages and system versions older than one week"
+    echo "-o    optimize storage space using nix-store --optimise"
+    echo ""
+    echo "-u    rebuild and upgrade the operating system. (DEPRECATED)"
 }
 
 no_args="true"
