@@ -174,7 +174,7 @@
         lxappearance
         libreoffice
         cheese
-        (callPackage /home/pines/Projects/nixpkgs/pkgs/development/interpreters/supercollider/default.nix {})
+        (callPackage ./packages/supercollider/default.nix {})
         # supercollider-with-plugins
         qt6.qtbase
         qt6.qttools

@@ -6,6 +6,10 @@
         url = "github:nixos/nixpkgs?ref=nixos-26.05";
     };
 
+    nixpkgs-unstable = {
+        url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    };
+
     sops-nix = {
         url = "github:Mic92/sops-nix";
     };
