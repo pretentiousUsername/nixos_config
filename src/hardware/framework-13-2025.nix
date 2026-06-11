@@ -1,9 +1,9 @@
 { config, networking, hardware, services, ... }:
 
 {
-    imports = [
-        <nixos-hardware/framework/13-inch/amd-ai-300-series>
-    ];
+    # imports = [
+    #     <nixos-hardware/framework/13-inch/amd-ai-300-series>
+    # ];
 
     networking.hostName = "superfluid"; # Define your hostname.
 

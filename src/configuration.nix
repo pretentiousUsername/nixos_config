@@ -5,7 +5,7 @@
 
 # Eventually I'll be using imports to make this a bit nicer to work with.
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
