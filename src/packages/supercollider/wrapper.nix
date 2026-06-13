@@ -4,12 +4,10 @@
   supercollider,
   plugins,
 }:
-let
-    localSc = ( callPackage ./default.nix { } );
-in
+
 symlinkJoin {
-  name = "supercollider-with-plugins-${localSc.version}";
-  paths = [ localSc ] ++ plugins;
+  name = "supercollider-with-plugins-${supercollider.version}";
+  paths = [ supercollider ] ++ plugins;
 
   nativeBuildInputs = [ makeWrapper ];
 
@@ -21,5 +19,5 @@ symlinkJoin {
     done
   '';
 
-  inherit (localSc) pname version meta;
+  inherit (supercollider) pname version meta;
 }

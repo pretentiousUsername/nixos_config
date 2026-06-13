@@ -16,8 +16,7 @@
   libxt,
   readline,
   useSCEL ? false,
-  enableOptimizations ? true,
-  enableNativeOptimizations ? false,  # be sure to set NIX_ENFORCE_NO_NATIVE to 0 before using this
+  useQtWebEngine ? false,
   emacs,
   gitUpdater,
   supercollider-with-plugins,
@@ -77,9 +76,7 @@ stdenv.mkDerivation rec {
   cmakeFlags = [
     "-DSC_WII=OFF"
     "-DSC_EL=${if useSCEL then "ON" else "OFF"}"
-    "-DCMAKE_BUILD_TYPE=${if enableOptimizations then "Release" else "RelWithDebInfo"}"
-    "-DNATIVE=${if enableNativeOptimizations then "ON" else "OFF"}"
-    (lib.cmakeBool "SC_USE_QTWEBENGINE" true)
+    (lib.cmakeBool "SC_USE_QTWEBENGINE" useQtWebEngine)
   ];
 
   passthru = {
