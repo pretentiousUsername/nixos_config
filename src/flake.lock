@@ -65,8 +65,8 @@
       },
       "original": {
         "owner": "pretentiousUsername",
-        "ref": "supercollider-3.14.1",
         "repo": "nixpkgs",
+        "rev": "669790f3b8bc0bd46524062a86cf8b1d71513ecf",
         "type": "github"
       }
     },

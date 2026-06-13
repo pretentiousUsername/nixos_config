@@ -211,7 +211,8 @@
         # ungoogled-chromium
     ]) ++
     (with pkgs-sc-update; [
-        supercollider-with-plugins
+        supercollider
+        supercolliderPlugins.sc3-plugins
     ]);
   };
 
