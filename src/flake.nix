@@ -20,6 +20,7 @@
     
     nixos-hardware = {
         url = "github:NixOS/nixos-hardware";
+        # follows = "nixpkgs";
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -34,11 +35,14 @@
         # system = "${pkgs.stdenv.hostPlatform.system}";
         pkgs = nixpkgs.legacyPackages.${system};
         pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
-        # pkgsSc = nixpkgs-sc-update.legacyPackages.${system};
+        pkgsSc = nixpkgs-sc-update.legacyPackages.${system};
     in {
         nixosConfigurations = {
             superfluid = nixpkgs.lib.nixosSystem {
-                specialArgs = { inherit inputs; };
+                specialArgs = {
+                    inherit inputs;
+                    # pkgsUnstable = import 
+                };
                 modules = [
                     inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
                     inputs.musnix.nixosModules.musnix

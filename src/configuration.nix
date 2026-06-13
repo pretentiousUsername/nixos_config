@@ -5,10 +5,10 @@
 
 # Eventually I'll be using imports to make this a bit nicer to work with.
 
-{ config, pkgs, inputs, specialArgs, options, modulesPath, ... }:
+{ config, pkgs, inputs, unstable, specialArgs, options, modulesPath, ... }:
 let
   unstable = import specialArgs.inputs.nixpkgs-unstable { };
-  scUpdate = import specialArgs.inputs.sc { };
+  # scUpdate = import specialArgs.inputs.sc-update { };
 in
 {
   imports =
@@ -180,7 +180,7 @@ in
         
         # (callPackage ./packages/supercollider/default.nix {})
         # (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
-        unstable.supercollider-with-plugins
+        # unstable.supercollider-with-plugins
         # qt6.qtbase
         # qt6.qttools
         # qt6.qtwebsockets
