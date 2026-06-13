@@ -7,9 +7,9 @@
         url = "github:nixos/nixpkgs?ref=nixos-unstable";
     };
 
-    nixpkgs-unstable = {
-        url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    };
+    # nixpkgs-unstable = {
+    #     url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    # };
 
     sops-nix = {
         url = "github:Mic92/sops-nix";
