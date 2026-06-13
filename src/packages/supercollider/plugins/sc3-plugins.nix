@@ -7,6 +7,7 @@
   supercollider,
   fftw,
   gitUpdater,
+  nixpkgs,
 }:
 
 stdenv.mkDerivation rec {
@@ -30,6 +31,7 @@ stdenv.mkDerivation rec {
   cmakeFlags = [
     "-DSC_PATH=${supercollider}/include/SuperCollider"
     "-DSUPERNOVA=ON"
+    "-FFTW3F_INCLUDE_DIR=${}"
   ];
 
   stripDebugList = [
