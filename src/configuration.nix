@@ -5,8 +5,10 @@
 
 # Eventually I'll be using imports to make this a bit nicer to work with.
 
-{ config, pkgs, inputs, ... }:
-
+{ config, pkgs, inputs, specialArgs, options, modulesPath, ... }:
+let
+  unstable = import specialArgs.inputs.unstable {};
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -177,7 +179,7 @@
         
         # (callPackage ./packages/supercollider/default.nix {})
         # (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
-        # supercollider-with-plugins
+        unstable.supercollider-with-plugins
         # qt6.qtbase
         # qt6.qttools
         # qt6.qtwebsockets
@@ -210,7 +212,7 @@
         decker
         deja-dup
         # ungoogled-chromium
-    ] ++ [ inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.supercollider-with-plugins ];
+    ];
   };
 
   # Install firefox.
