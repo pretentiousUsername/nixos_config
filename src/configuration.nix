@@ -173,10 +173,9 @@
         lxappearance
         libreoffice
         cheese
-        
         # (callPackage ./packages/supercollider/default.nix {})
         # (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
-        # unstable.supercollider-with-plugins
+        # supercollider-with-plugins
         # qt6.qtbase
         # qt6.qttools
         # qt6.qtwebsockets
@@ -208,12 +207,12 @@
         inkscape
         decker
         deja-dup
-        # ungoogled-chromium
+        ungoogled-chromium
     ]) ++
-    (with pkgs-sc-update; [
-        supercollider
-        supercolliderPlugins.sc3-plugins
-    ]);
+        (with pkgs-sc-update; [
+            supercollider-with-plugins
+            supercolliderPlugins.sc3-plugins
+        ]);
   };
 
   # Install firefox.

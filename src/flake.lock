@@ -56,17 +56,17 @@
     },
     "nixpkgs-sc-update": {
       "locked": {
-        "lastModified": 1781374169,
-        "narHash": "sha256-7NNln23YsL/JXMIfpZVO/AMlvz2BJjYAq3TKnJ0VqEE=",
+        "lastModified": 1781389180,
+        "narHash": "sha256-ZKx06zuei+4o1P32pB8cIUISZj8OsCSuuZphGX1v72A=",
         "owner": "pretentiousUsername",
         "repo": "nixpkgs",
-        "rev": "669790f3b8bc0bd46524062a86cf8b1d71513ecf",
+        "rev": "24660475aaf0b47c702abf803772b945fbf2af28",
         "type": "github"
       },
       "original": {
         "owner": "pretentiousUsername",
+        "ref": "supercollider-3.14.1",
         "repo": "nixpkgs",
-        "rev": "669790f3b8bc0bd46524062a86cf8b1d71513ecf",
         "type": "github"
       }
     },

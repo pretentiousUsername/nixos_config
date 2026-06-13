@@ -11,7 +11,7 @@
     };
 
     nixpkgs-sc-update = {
-        url = "github:pretentiousUsername/nixpkgs/669790f3b8bc0bd46524062a86cf8b1d71513ecf";
+        url = "github:pretentiousUsername/nixpkgs?ref=supercollider-3.14.1";
     };
 
     sops-nix = {
