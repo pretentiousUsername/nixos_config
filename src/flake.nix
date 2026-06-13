@@ -30,7 +30,7 @@
         # system = "x86_64-linux";
         system = "${pkgs.stdenv.hostPlatform.system}";
         pkgs = nixpkgs.legacyPackages.${system};
-        pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+        # pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
     in
     {
         nixosConfigurations = {

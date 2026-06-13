@@ -209,7 +209,7 @@
         decker
         deja-dup
         # ungoogled-chromium
-    ] ++ with inputs.pkgs-unstable; [ supercollider-with-plugins ];
+    ] ++ with inputs.nixpkgs-unstable; [ supercollider-with-plugins ];
   };
 
   # Install firefox.
