@@ -174,9 +174,9 @@
         lxappearance
         libreoffice
         cheese
-        (callPackage ./packages/supercollider/default.nix {})
-        (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
-        # supercollider-with-plugins
+        # (callPackage ./packages/supercollider/default.nix {})
+        # (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
+        supercollider-with-plugins
         qt6.qtbase
         qt6.qttools
         qt6.qtwebsockets
