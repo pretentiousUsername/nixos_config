@@ -25,12 +25,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, ... } @ inputs:
     let
         # system = "x86_64-linux";
         system = "${pkgs.stdenv.hostPlatform.system}";
         pkgs = nixpkgs.legacyPackages.${system};
-        # pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+        pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
     in
     {
         nixosConfigurations = {
