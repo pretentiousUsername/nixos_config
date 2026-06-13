@@ -175,12 +175,13 @@
         libreoffice
         cheese
         (callPackage ./packages/supercollider/default.nix {})
+        (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
         # supercollider-with-plugins
         qt6.qtbase
         qt6.qttools
         qt6.qtwebsockets
         # supercollider
-        supercolliderPlugins.sc3-plugins
+        # supercolliderPlugins.sc3-plugins
         vimPlugins.nvim-treesitter
         lua
         luajit
