@@ -34,14 +34,16 @@
         system = "x86_64-linux";
         # system = "${pkgs.stdenv.hostPlatform.system}";
         pkgs = nixpkgs.legacyPackages.${system};
-        pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
-        pkgsSc = nixpkgs-sc-update.legacyPackages.${system};
-    in {
+        pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+        pkgs-sc-update = nixpkgs-sc-update.legacyPackages.${system};
+    in
+    {
         nixosConfigurations = {
             superfluid = nixpkgs.lib.nixosSystem {
                 specialArgs = {
                     inherit inputs;
-                    # pkgsUnstable = import 
+                    inherit pkgs-unstable;
+                    inherit pkgs-sc-update;
                 };
                 modules = [
                     inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series

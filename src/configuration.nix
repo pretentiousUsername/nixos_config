@@ -5,11 +5,7 @@
 
 # Eventually I'll be using imports to make this a bit nicer to work with.
 
-{ config, pkgs, inputs, unstable, specialArgs, options, modulesPath, ... }:
-let
-  unstable = import specialArgs.inputs.nixpkgs-unstable { };
-  # scUpdate = import specialArgs.inputs.sc-update { };
-in
+{ config, pkgs, inputs, pkgs-unstable, pkgs-sc-update, specialArgs, options, modulesPath, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -150,7 +146,7 @@ in
     isNormalUser = true;
     description = "pines";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
-    packages = with pkgs; [
+    packages = (with pkgs; [
         nixpkgs-fmt
         nixpkgs-lint
         nixpkgs-review
@@ -213,7 +209,10 @@ in
         decker
         deja-dup
         # ungoogled-chromium
-    ];
+    ]) ++
+    (with pkgs-sc-update; [
+        supercollider-with-plugins
+    ]);
   };
 
   # Install firefox.
