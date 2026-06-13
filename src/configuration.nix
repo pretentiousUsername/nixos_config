@@ -180,7 +180,7 @@
         qt6.qttools
         qt6.qtwebsockets
         # supercollider
-        # supercolliderPlugins.sc3-plugins
+        supercolliderPlugins.sc3-plugins
         vimPlugins.nvim-treesitter
         lua
         luajit

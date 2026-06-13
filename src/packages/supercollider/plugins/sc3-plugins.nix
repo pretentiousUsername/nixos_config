@@ -31,7 +31,7 @@ stdenv.mkDerivation rec {
   cmakeFlags = [
     "-DSC_PATH=${supercollider}/include/SuperCollider"
     "-DSUPERNOVA=ON"
-    "-FFTW3F_INCLUDE_DIR=${}"
+    "-FFTW3F_INCLUDE_DIR=/nix/store/kq39hlb5gz0rvfsndxzbk2fkbsdqds2z-fftw-double-3.3.10"
   ];
 
   stripDebugList = [
@@ -52,4 +52,4 @@ stdenv.mkDerivation rec {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };
-}
+
