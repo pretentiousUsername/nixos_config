@@ -34,7 +34,7 @@
         # system = "${pkgs.stdenv.hostPlatform.system}";
         pkgs = nixpkgs.legacyPackages.${system};
         pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
-        pkgsSc = nixpkgs-sc-update.legacyPackages.${system};
+        # pkgsSc = nixpkgs-sc-update.legacyPackages.${system};
     in {
         nixosConfigurations = {
             superfluid = nixpkgs.lib.nixosSystem {
@@ -42,8 +42,8 @@
                 modules = [
                     inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
                     inputs.musnix.nixosModules.musnix
-                    ./hosts/superfluid/superfluid.nix
                     ./configuration.nix
+                    ./hosts/superfluid/superfluid.nix
                 ];
             };
         };
