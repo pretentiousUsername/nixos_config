@@ -54,6 +54,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-sc-update": {
+      "locked": {
+        "lastModified": 1781374169,
+        "narHash": "sha256-7NNln23YsL/JXMIfpZVO/AMlvz2BJjYAq3TKnJ0VqEE=",
+        "owner": "pretentiousUsername",
+        "repo": "nixpkgs",
+        "rev": "669790f3b8bc0bd46524062a86cf8b1d71513ecf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pretentiousUsername",
+        "ref": "supercollider-3.14.1",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-unstable": {
       "locked": {
         "lastModified": 1781074563,
@@ -107,6 +123,7 @@
         "musnix": "musnix",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-sc-update": "nixpkgs-sc-update",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "sops-nix": "sops-nix"
       }

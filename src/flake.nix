@@ -4,11 +4,14 @@
   inputs = {
     nixpkgs = {
         url = "github:nixos/nixpkgs?ref=nixos-26.05";
-        # url = "github:nixos/nixpkgs?ref=nixos-unstable";
     };
 
     nixpkgs-unstable = {
         url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    };
+
+    nixpkgs-sc-update = {
+        url = "github:pretentiousUsername/nixpkgs?ref=supercollider-3.14.1";
     };
 
     sops-nix = {
@@ -25,12 +28,13 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-sc-update, ... } @ inputs:
     let
-        # system = "x86_64-linux";
-        system = "${pkgs.stdenv.hostPlatform.system}";
+        system = "x86_64-linux";
+        # system = "${pkgs.stdenv.hostPlatform.system}";
         pkgs = nixpkgs.legacyPackages.${system};
         pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
+        pkgsSc = nixpkgs-sc-update.legacyPackages.${system};
     in {
         nixosConfigurations = {
             superfluid = nixpkgs.lib.nixosSystem {

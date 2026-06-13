@@ -7,7 +7,8 @@
 
 { config, pkgs, inputs, specialArgs, options, modulesPath, ... }:
 let
-  unstable = import specialArgs.inputs.unstable {};
+  unstable = import specialArgs.inputs.nixpkgs-unstable { };
+  scUpdate = import specialArgs.inputs.sc { };
 in
 {
   imports =
