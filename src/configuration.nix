@@ -174,6 +174,7 @@
         lxappearance
         libreoffice
         cheese
+        
         # (callPackage ./packages/supercollider/default.nix {})
         # (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
         # supercollider-with-plugins
@@ -209,7 +210,7 @@
         decker
         deja-dup
         # ungoogled-chromium
-    ] ++ [ inputs.pkgsUnstable.supercollider-with-plugins ];
+    ] ++ [ inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.supercollider-with-plugins ];
   };
 
   # Install firefox.

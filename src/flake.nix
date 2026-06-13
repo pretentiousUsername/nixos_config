@@ -31,8 +31,7 @@
         system = "${pkgs.stdenv.hostPlatform.system}";
         pkgs = nixpkgs.legacyPackages.${system};
         pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
-    in
-    {
+    in {
         nixosConfigurations = {
             superfluid = nixpkgs.lib.nixosSystem {
                 specialArgs = { inherit inputs; };
