@@ -176,10 +176,10 @@
         cheese
         # (callPackage ./packages/supercollider/default.nix {})
         # (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
-        supercollider-with-plugins
-        qt6.qtbase
-        qt6.qttools
-        qt6.qtwebsockets
+        # supercollider-with-plugins
+        # qt6.qtbase
+        # qt6.qttools
+        # qt6.qtwebsockets
         # supercollider
         # supercolliderPlugins.sc3-plugins
         vimPlugins.nvim-treesitter
@@ -209,7 +209,7 @@
         decker
         deja-dup
         # ungoogled-chromium
-    ];
+    ] ++ with pkgs-unstable; [ supercollider-with-plugins ];
   };
 
   # Install firefox.

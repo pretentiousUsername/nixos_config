@@ -3,13 +3,13 @@
 
   inputs = {
     nixpkgs = {
-        # url = "github:nixos/nixpkgs?ref=nixos-26.05";
-        url = "github:nixos/nixpkgs?ref=nixos-unstable";
+        url = "github:nixos/nixpkgs?ref=nixos-26.05";
+        # url = "github:nixos/nixpkgs?ref=nixos-unstable";
     };
 
-    # nixpkgs-unstable = {
-    #     url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    # };
+    nixpkgs-unstable = {
+        url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    };
 
     sops-nix = {
         url = "github:Mic92/sops-nix";
@@ -29,6 +29,7 @@
     let
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${system};
+        pkgs-unstable = nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
     in
     {
         nixosConfigurations = {
