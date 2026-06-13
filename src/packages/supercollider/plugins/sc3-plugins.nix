@@ -26,14 +26,13 @@ stdenv.mkDerivation rec {
   buildInputs = [
     supercollider
     fftw
-    fftwFloat
+    fftwFloat # builds without this will return an error message about no FFTW3F-INCLUDE-DIR
   ];
 
   cmakeFlags = [
     "-DSC_PATH=${supercollider}/include/SuperCollider"
+    "-DCMAKE_BUILD_TYPE=Release"
     "-DSUPERNOVA=ON"
-    # "-FFTW3F_INCLUDE_DIR=${}"
-
   ];
 
   stripDebugList = [
