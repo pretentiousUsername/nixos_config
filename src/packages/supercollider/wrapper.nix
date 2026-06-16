@@ -1,13 +1,14 @@
 {
   symlinkJoin,
   makeWrapper,
-  supercollider,
-  plugins,
+  callPackage,
+  sc ? (callPackage ./default.nix { }),
+  plugins ? [ (callPackage ./sc3-plugins.nix) ],
 }:
 
 symlinkJoin {
-  name = "supercollider-with-plugins-${supercollider.version}";
-  paths = [ supercollider ] ++ plugins;
+  name = "supercollider-with-plugins-${sc.version}";
+  paths = [ sc ] ++ plugins;
 
   nativeBuildInputs = [ makeWrapper ];
 
@@ -19,5 +20,5 @@ symlinkJoin {
     done
   '';
 
-  inherit (supercollider) pname version meta;
+  inherit (sc) pname version meta;
 }

@@ -15,6 +15,7 @@
       ./fonts.nix
       inputs.musnix.nixosModules.musnix
       ./services/sops.nix
+      ./packages/ld/ld.nix
     ];
 
   musnix.enable = true;  # this should make audio work nicely
@@ -173,8 +174,10 @@
         lxappearance
         libreoffice
         cheese
-        # (callPackage ./packages/supercollider/default.nix {})
-        # (callPackage ./packages/supercollider/plugins/sc3-plugins.nix {})
+
+        # (callPackage ./packages/supercollider/wrapper.nix { }) # <-- supercollider-with-plugins
+        # (callPackage ./packages/supercollider/default.nix {}) # supercollider
+        # (callPackage ./packages/supercollider/sc3-plugins.nix {})
         # supercollider-with-plugins
         # qt6.qtbase
         # qt6.qttools
@@ -211,8 +214,8 @@
     ]) ++
         (with pkgs-sc-update; [
             supercollider-with-plugins
-            supercolliderPlugins.sc3-plugins
-        ]);
+        ])
+    ; # be sure to include another `++ (with <thing>; [ <your packages> ])` when you want to add packages from another channel
   };
 
   # Install firefox.

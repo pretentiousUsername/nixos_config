@@ -4,12 +4,10 @@
   fetchpatch2,
   fetchurl,
   cmake,
-  # localPackage,
-  callPackage,
+  localPackage,
   fftw,
   fftwFloat,
   gitUpdater,
-  sc ? (callPackage ./default.nix {}),
 }:
 
 stdenv.mkDerivation rec {
@@ -26,13 +24,13 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ cmake ];
 
   buildInputs = [
-    sc
+    supercollider
     fftw
     fftwFloat # builds without this will return an error message about no FFTW3F-INCLUDE-DIR
   ];
 
   cmakeFlags = [
-    "-DSC_PATH=${sc}/include/SuperCollider"
+    "-DSC_PATH=${supercollider}/include/SuperCollider"
     "-DSUPERNOVA=ON"
   ];
 

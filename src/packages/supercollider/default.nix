@@ -16,7 +16,7 @@
   libxt,
   readline,
   useSCEL ? false,
-  useQtWebEngine ? false,
+  useQtWebEngine ? true,
   emacs,
   gitUpdater,
   supercollider-with-plugins,
