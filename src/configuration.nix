@@ -174,7 +174,7 @@
         lxappearance
         libreoffice
         cheese
-
+        cmus
         # (callPackage ./packages/supercollider/wrapper.nix { }) # <-- supercollider-with-plugins
         # (callPackage ./packages/supercollider/default.nix {}) # supercollider
         # (callPackage ./packages/supercollider/sc3-plugins.nix {})
@@ -265,14 +265,6 @@
     # version control
     git
 
-    # # python
-    # python313
-    # python313Packages.pip
-    # python313Packages.virtualenv
-    # python313Packages.numpy
-    # python313Packages.scipy
-    # python313Packages.pandas
-
     # # c/c++
     # gcc
     # gdb
@@ -319,20 +311,14 @@
     # # for notes and stuff---i'm just trying to see if this will work, since it
     # # wasn't working in the user packages
     # anytype
-    (python3.withPackages(pypkgs: with pypkgs; [
-        numpy
-        pandas
-        matplotlib
-        scipy
-        pywavelets
-    ]))
+    # python3
 
     # lsp stuff
     ## python
-    ruff
-    pyright
+    # ruff
+    # pyright
     ## lua
-    luajitPackages.lua-lsp
+    # luajitPackages.lua-lsp
 
     # niv  # manage nix dependencies
   ];
