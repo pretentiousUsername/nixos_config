@@ -175,6 +175,7 @@
         libreoffice
         cheese
         cmus
+        mpv
         # (callPackage ./packages/supercollider/wrapper.nix { }) # <-- supercollider-with-plugins
         # (callPackage ./packages/supercollider/default.nix {}) # supercollider
         # (callPackage ./packages/supercollider/sc3-plugins.nix {})
@@ -212,8 +213,12 @@
         deja-dup
         ungoogled-chromium
     ]) ++
+        (with pkgs-unstable; [
+            themix-gui
+        ]) ++
         (with pkgs-sc-update; [
             supercollider-with-plugins
+
         ])
     ; # be sure to include another `++ (with <thing>; [ <your packages> ])` when you want to add packages from another channel
   };
@@ -300,7 +305,6 @@
     
     xarchiver
     xclip
-    themix-gui
 
     gparted
     
