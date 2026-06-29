@@ -15,13 +15,11 @@
       ./fonts.nix
       inputs.musnix.nixosModules.musnix
       ./services/sops.nix
+      ./services/sound.nix
       ./packages/ld/ld.nix
     ];
 
   musnix.enable = true;  # this should make audio work nicely
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -50,88 +48,12 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver = {
-    enable = true;
-    displayManager = {
-        # Lightdm and i3 do not get along for some reason.
-        lightdm = {
-            enable = true;
-            greeters.gtk = {
-                enable = true;
-                indicators = [
-                    "~host"
-                    "~spacer"
-                    "~clock"
-                    "~spacer"
-                    "~session"
-                    "~a11y"
-                    "~power"
-                ];
-                cursorTheme.size = 32;
-                extraConfig = ''
-                    font-name = monospace
-                    user-background = true
-                    background = /home/pines/Pictures/Wallpapers/1678704649268102.png
-                '';
-            };
-            greeters.slick = {
-                enable = false;
-            };
-        };
-    };
-
-    windowManager.i3 = {
-        enable = true;
-        extraPackages = with pkgs; [
-            i3status-rust
-            i3lock
-            i3blocks
-            i3status
-        ];
-    };
-
-    # Enable the KDE Plasma Desktop Environment.
-
-  };
-
-  services.displayManager = {
-        defaultSession = "none+i3";
-        sddm.enable = false;
-  };
-
-  services.desktopManager.plasma6.enable = true;
-
-  xdg = {
-    autostart.enable = true;
-  };
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound with pipewire.
   # services.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-    
-  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -222,9 +144,6 @@
         ])
     ; # be sure to include another `++ (with <thing>; [ <your packages> ])` when you want to add packages from another channel
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # enable dconf (for wpgtk)
   programs.dconf.enable = true;

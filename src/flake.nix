@@ -50,6 +50,7 @@
                     inputs.musnix.nixosModules.musnix
                     ./configuration.nix
                     ./hosts/superfluid/superfluid.nix
+                    ./programs/desktop/i3.nix
                 ];
             };
         };
