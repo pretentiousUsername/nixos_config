@@ -11,7 +11,6 @@
   imports =
     [
       ./experimental.nix
-      ./fonts.nix
       inputs.musnix.nixosModules.musnix
       ./services/sops.nix
       ./services/sound.nix
