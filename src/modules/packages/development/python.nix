@@ -7,7 +7,7 @@
 
   config = lib.mkIf config.development.python.enable {
     environment.systemPackages = with pkgs; [
-      python
+      python3
     ];
   };
 }
