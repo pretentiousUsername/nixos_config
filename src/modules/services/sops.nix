@@ -2,11 +2,11 @@
 
 {
   options = {
-    system-services.sops.enable = lib.mkEnableOption "Enable SOPS service.";
+    sops-service.enable = lib.mkEnableOption "Enable SOPS service.";
 
   };
   
-  config = lib.mkIf config.system-services.sops.enable {
+  config = lib.mkIf config.sops-service.enable {
     imports =
       [
         inputs.sops-nix.nixosModules.sops

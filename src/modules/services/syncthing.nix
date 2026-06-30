@@ -1,10 +1,10 @@
 { pkgs, inputs, config, lib, ... }:
 {
   options = {
-    system-services.syncthing.enable = lib.mkEnableOption "Enable the SyncThing service.";
+    syncthing.enable = lib.mkEnableOption "Enable the SyncThing service.";
   };
 
-  config = lib.mkIf config.system-services.syncthing.enable {
+  config = lib.mkIf config.syncthing.enable {
     # Enable/configure Synthing
     # services.syncthing = {
     #   enable = true;

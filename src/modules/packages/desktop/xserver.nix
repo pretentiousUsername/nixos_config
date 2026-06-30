@@ -29,18 +29,19 @@
           font-name = sans
           user-background = true
           '';
+          };
         };
+      };
+
+      # Configure keymap in X11
+      xkb = {
+        layout = "us";
+        variant = "";
       };
     };
 
     xdg = {
       autostart.enable = true;
-    };
-
-    # Configure keymap in X11
-    services.xserver.xkb = {
-      layout = "us";
-      variant = "";
     };
 
     services.picom = {

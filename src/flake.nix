@@ -51,6 +51,7 @@
                     ./configuration.nix
                     # ./modules
                     ./hosts/superfluid/configuration.nix
+                    ./modules
                 ];
             };
         };

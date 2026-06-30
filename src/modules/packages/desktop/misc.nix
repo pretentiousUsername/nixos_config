@@ -2,10 +2,10 @@
 
 {
   options = {
-    desktop.misc-desktop.enable = lib.mkEnableOption "Use miscellaneous options";
+    desktop.misc.enable = lib.mkEnableOption "Use miscellaneous options";
   };
 
-  config = lib.mkIf config.misc-desktop.enable {
+  config = lib.mkIf config.desktop.misc.enable {
     environment.systemPackages = with pkgs; [
       adwaita-icon-theme
       brightnessctl
