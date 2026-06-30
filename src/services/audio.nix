@@ -1,6 +1,10 @@
 { config, ... }:
 
 {
+  musnix.enable = true;  # this should make audio work nicely
+
+  security.rtkit.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;

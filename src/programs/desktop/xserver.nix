@@ -38,6 +38,14 @@
     variant = "";
   };
 
+  services.picom = {
+    enable = true;
+  };
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  # services.xserver.libinput.enable = true;
+
+
   environment.systemPackages = with pkgs; [
     xrandr
     arandr

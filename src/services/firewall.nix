@@ -1,11 +1,6 @@
-{ pkgs, inputs, config, ... }:
-{
-  # Enable/configure Synthing
-  # services.syncthing = {
-  #   enable = true;
-  #   openDefaultPorts = true;
-  # };
+{ config, pkgs }:
 
+{
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
