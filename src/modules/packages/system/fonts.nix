@@ -2,10 +2,10 @@
 
 {
   options = {
-    system.fonts.enable = lib.mkEnableOption "Enable external fonts.";
+    system-config.fonts.enable = lib.mkEnableOption "Enable external fonts.";
   };
 
-  config = lib.mkIf config.desktop.fonts.enable {
+  config = lib.mkIf config.system-config.fonts.enable {
     environment.systemPackages = with pkgs; [
       inter
       stix-two
