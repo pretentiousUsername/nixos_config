@@ -2,10 +2,10 @@
 
 {
   options = {
-    programming.hugo.enable = lib.mkEnableOption "Enables Hugo.";
+    development.hugo.enable = lib.mkEnableOption "Enables Hugo.";
   };
 
-  config = lib.mkIf config.programming.hugo.enable {
+  config = lib.mkIf config.development.hugo.enable {
     users.users.pines.packages = with pkgs; [
       hugo
     ];

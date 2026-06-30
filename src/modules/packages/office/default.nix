@@ -7,7 +7,7 @@
   ];
 
   office = {
-    fonts.enable = lib.mkDefaultOption true;
-    misc.enable = lib.mkDefaultOption true;
+    fonts.enable = lib.mkDefault true;
+    misc.enable = lib.mkDefault true;
   };
 }

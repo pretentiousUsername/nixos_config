@@ -2,10 +2,10 @@
 
 {
   options = {
-    programming.nixpkgs.enable = lib.mkEnableOption "Help maintain nixpkgs.";
+    development.nixpkgs.enable = lib.mkEnableOption "Help maintain nixpkgs.";
   };
 
-  config = lib.mkIf config.programming.nixpkgs.enable {
+  config = lib.mkIf config.development.nixpkgs.enable {
     users.users.pines.packages = with pkgs; [
       nixpkgs-fmt
       nixpkgs-lint

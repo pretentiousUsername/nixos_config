@@ -2,10 +2,10 @@
 
 {
   options = {
-    programming.python.enable = lib.mkEnableOption "Enable Python.";
+    development.python.enable = lib.mkEnableOption "Enable Python.";
   };
 
-  config = lib.mkIf config.programming.python.enable {
+  config = lib.mkIf config.development.python.enable {
     environment.systemPackages = with pkgs; [
       python
     ];

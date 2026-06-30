@@ -3,17 +3,17 @@
 {
   imports = [
     ./cad.nix
+    ./misc.nix
     ./devenv.nix
     ./git.nix
     ./hugo.nix
     ./lazygit.nix
     ./neovim.nix
     ./nixpkgs.nix
-    ./misc.nix
     ./python.nix
   ];
 
-  programming = {
+  development = {
     cad.enable = lib.mkDefault false;
     misc.enable = true;
     git.enable = lib.mkDefault true;

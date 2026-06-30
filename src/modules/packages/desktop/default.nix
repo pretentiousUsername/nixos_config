@@ -9,12 +9,11 @@
   ];
   
   desktop = {
+    xserver.enable = lib.mkDefault false;
+    wal.enable = lib.mkDefault false;
     misc.enable = lib.mkDefault true;
     default-fonts.enable = lib.mkDefault true;
     i3.enable = lib.mkDefault false;
     plasma.enable = lib.mkDefault false;
   };
-  # xserver.enable = lib.mkIf i3.enable true;
-  # wal.enable = lib.mkIf i3.enable true;
-
 }

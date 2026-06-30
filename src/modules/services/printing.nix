@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.system-services.printing.enable {
-    environment.systemVariables = with pkgs; [
+    environment.systemPackages = with pkgs; [
       hplip  # printing drivers
     ];
   

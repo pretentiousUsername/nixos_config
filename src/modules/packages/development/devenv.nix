@@ -2,10 +2,10 @@
 
 {
   options = {
-    programming.devenv.enable = lib.mkEnableOption "Enable devenv.";
+    development.devenv.enable = lib.mkEnableOption "Enable devenv.";
   };
 
-  config = lib.mkIf config.programming.devenv.enable {
+  config = lib.mkIf config.development.devenv.enable {
     programs.direnv.enable = true;
 
     programs.bash.interactiveShellInit =

@@ -4,13 +4,13 @@
   imports = [
     ./system
     ./desktop
-    # ./development
-    # ./gaming
-    # ./graphics
-    # ./internet
-    # ./media
-    # ./music
-    # ./office
+    ./development
+    ./gaming
+    ./graphics
+    ./internet
+    ./media
+    ./music
+    ./office
   ];
 
 }

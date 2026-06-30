@@ -2,10 +2,10 @@
 
 {
   options = {
-    programming.neovim.enable = lib.mkEnableOption "Use neovim";
+    development.neovim.enable = lib.mkEnableOption "Use neovim";
   };
 
-  config = lib.mkIf config.programming.neovim.enable {
+  config = lib.mkIf config.development.neovim.enable {
     users.users.pines.packages = with pkgs; [
       vimPlugins.nvim-treesitter
       lua

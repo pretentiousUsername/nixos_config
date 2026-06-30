@@ -2,10 +2,10 @@
 
 {
   options = {
-    programming.git.enable = lib.mkEnableOption "Enable git.";
+    development.git.enable = lib.mkEnableOption "Enable git.";
   };
 
-  config = lib.mkIf config.programming.git.enable {
+  config = lib.mkIf config.development.git.enable {
     programs.git = {
       enable = true;
     };

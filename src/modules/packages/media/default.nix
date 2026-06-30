@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ media.nix ];
+  imports = [ ./media.nix ];
 
   media.enable = true;
 }

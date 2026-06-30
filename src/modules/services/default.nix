@@ -11,11 +11,11 @@
   ];
 
   system-services = {
-    keyring.enable = lib.mkDefaultOption true;
-    sops.enable = lib.mkDefaultOption true;
-    audio.enable = lib.mkDefaultOption true;
-    firewall.enable = lib.mkDefaultOption true;
-    printing.enable = lib.mkDefaultOption false;
-    syncthing.enable = lib.mkDefaultOption false;
+    gnome-keyring.enable = lib.mkDefault true;
+    sops.enable = lib.mkDefault true;
+    audio.enable = lib.mkDefault true;
+    firewall.enable = lib.mkDefault true;
+    printing.enable = lib.mkDefault false;
+    syncthing.enable = lib.mkDefault false;
   };
 }

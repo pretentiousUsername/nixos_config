@@ -2,10 +2,10 @@
 
 {
   options = {
-    programming.misc.enable = lib.mkEnableOption "Misc. stuff.";
+    development.misc.enable = lib.mkEnableOption "Misc. stuff.";
   };
 
-  config = lib.mkIf config.programming.misc.enable {
+  config = lib.mkIf config.development.misc.enable {
     users.users.pines.packages = with pkgs; [
       fzf
     ];

@@ -8,8 +8,8 @@
   ];
 
   internet = {
-    firefox.enable = lib.mkDefaultValue true;
-    chat.enable = lib.mkDefaultValue true;
-    chromium.enable = lib.mkDefaultValue false;
+    firefox.enable = lib.mkDefault true;
+    chat.enable = lib.mkDefault true;
+    chromium.enable = lib.mkDefault false;
   };
 }

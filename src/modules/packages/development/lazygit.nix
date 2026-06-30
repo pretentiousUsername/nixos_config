@@ -1,11 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   options = {
-    programming.lazygit.enable = lib.mkEnableOption "Enable lazygit.";
+    development.lazygit.enable = lib.mkEnableOption "Enable lazygit.";
   };
 
-  config = lib.mkIf config.programming.lazygit.enable {
+  config = lib.mkIf config.development.lazygit.enable {
     programs.lazygit = {
       enable = true;
     };

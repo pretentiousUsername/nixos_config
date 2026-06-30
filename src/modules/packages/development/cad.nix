@@ -2,10 +2,10 @@
 
 {
   options = {
-    programming.cad.enable = lib.mkEnableOption "Enable CAD.";
+    development.cad.enable = lib.mkEnableOption "Enable CAD.";
   };
 
-  config = lib.mkIf programming.cad.enable {
+  config = lib.mkIf config.development.cad.enable {
     users.users.pines.packages = with pkgs; [
       kicad
       freecad

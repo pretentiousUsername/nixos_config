@@ -9,5 +9,5 @@
   gaming = {
     steam.enable = lib.mkDefault false;
     heroic-launcher.enable = lib.mkDefault false;
-  }
+  };
 }

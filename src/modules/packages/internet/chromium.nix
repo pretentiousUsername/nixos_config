@@ -2,10 +2,10 @@
 
 {
   options = {
-    internet.chromium = lib.mkEnabledOption "Enable Chromium.";
+    internet.chromium.enable = lib.mkEnableOption "Enable Chromium.";
   };
 
-  packages = lib.mkIf config.internet.chromium {
+  config = lib.mkIf config.internet.chromium.enable {
     users.users.pines.packages = with pkgs; [
       ungoogled-chromium
     ];
