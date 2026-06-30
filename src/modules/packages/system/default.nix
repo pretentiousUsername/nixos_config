@@ -8,12 +8,14 @@
     ./network.nix
     ./shell.nix
     ./misc.nix
+    ./fonts.nix
   ];
 
   system-config = {
     archive.enable = lib.mkDefault true;
     audio.enable = lib.mkDefault true;
     ld.enable = lib.mkDefault true;
+    fonts.enable = lib.mkDefault true;
     network.enable = lib.mkDefault true;
     shell.enable = lib.mkDefault true;
     misc.enable = lib.mkDefault true;
