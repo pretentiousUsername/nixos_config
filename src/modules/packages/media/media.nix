@@ -1,4 +1,4 @@
-{ config, pkgs }:
+{ config, pkgs, ... }:
 
 {
   options = {
@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.media.enable {
-    users.users.pines.packages = [
+    users.users.pines.packages = with pkgs; [
       audacious
       mpv
       # cmus  # I *might* use this

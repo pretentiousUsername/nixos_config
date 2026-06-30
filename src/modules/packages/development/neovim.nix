@@ -1,4 +1,4 @@
-{ config, pkgs, lib }:
+{ config, pkgs, lib, ... }:
 
 {
   options = {
@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.programming.neovim.enable {
-    users.users.pines.packages = [
+    users.users.pines.packages = with pkgs; [
       vimPlugins.nvim-treesitter
       lua
       luajit
@@ -14,6 +14,7 @@
     ];
 
     programs.neovim = {
+      # package = [ pkgs.neovim ];
       enable = true;
       defaultEditor = true;
       withPython3 = true;

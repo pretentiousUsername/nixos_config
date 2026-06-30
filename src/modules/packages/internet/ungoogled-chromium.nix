@@ -6,7 +6,7 @@
   };
 
   packages = lib.mkIf config.internet.chromium {
-    users.users.pines.packages = [
+    users.users.pines.packages = with pkgs; [
       ungoogled-chromium
     ];
   };

@@ -6,6 +6,7 @@
   imports =
     [
       ./experimental.nix
+      ./modules
     ];
 
 

@@ -1,4 +1,4 @@
-{ config, pkgs, lib }:
+{ config, pkgs, lib, ... }:
 
 {
   options = {
@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.graphics.screenshot.enable {
-    users.users.pines.packages = [
+    users.users.pines.packages = with pkgs; [
       flameshot
     ];
   };

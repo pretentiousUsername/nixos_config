@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.programming.nixpkgs.enable {
-    users.users.pines.packages = [
+    users.users.pines.packages = with pkgs; [
       nixpkgs-fmt
       nixpkgs-lint
       nixpkgs-review

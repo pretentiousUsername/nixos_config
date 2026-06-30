@@ -1,4 +1,4 @@
-{ config, pkgs, lib }:
+{ config, pkgs, lib, ... }:
 
 {
   options = {
@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.system-config.misc.enable {
-    users.users.pines.packages = [
+    users.users.pines.packages = with pkgs; [
       alacritty-graphics
       hyfetch  # yep
       btop

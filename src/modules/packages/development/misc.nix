@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.programming.misc.enable {
-    users.users.pines.packages = [
+    users.users.pines.packages = with pkgs; [
       fzf
     ];
   };
