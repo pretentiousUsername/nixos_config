@@ -37,4 +37,15 @@
     layout = "us";
     variant = "";
   };
+
+  environment.systemPackages = with pkgs; [
+    xrandr
+    arandr
+    xss-lock
+    # required to make i3 get the media keys and stuff---it's quite handy
+    xorg.xf86inputevdev
+    xclip
+    xev
+    xbacklight
+  ];
 }

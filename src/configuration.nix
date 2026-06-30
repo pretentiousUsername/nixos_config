@@ -48,9 +48,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
   # Enable sound with pipewire.
   # services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -58,101 +55,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Enable/configure Synthing
-  # services.syncthing = {
-  #   enable = true;
-  #   openDefaultPorts = true;
-  # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pines = {
     isNormalUser = true;
     description = "pines";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
-    packages = (with pkgs; [
-        nixpkgs-fmt
-        nixpkgs-lint
-        nixpkgs-review
-        alacritty-graphics
-        pandoc
-        zotero
-        haskellPackages.pandoc-crossref
-        texliveFull
-        typst
-        inter
-        stix-two
-        julia-mono
-        corefonts
-        vista-fonts
-        anytype
-        # logseq  # it uses an insecure electron version?
-        zathura
-        xfce.thunar
-        lazygit
-        hyfetch  # yep
-        audacity
-        audacious
-        discord
-        lxappearance
-        libreoffice
-        cheese
-        cmus
-        mpv
-        # (callPackage ./packages/supercollider/wrapper.nix { }) # <-- supercollider-with-plugins
-        # (callPackage ./packages/supercollider/default.nix {}) # supercollider
-        # (callPackage ./packages/supercollider/sc3-plugins.nix {})
-        # supercollider-with-plugins
-        # qt6.qtbase
-        # qt6.qttools
-        # qt6.qtwebsockets
-        # supercollider
-        # supercolliderPlugins.sc3-plugins
-        vimPlugins.nvim-treesitter
-        lua
-        luajit
-        luarocks  # necessary for my neovim config
-        # thunderbird
-        # python
-        # julia
-        # pywal16
-        # wallust
-        imagemagick
-        ghostscript
-        poppler-utils
-        flameshot
-        hugo
-        fzf
-        gcc
-
-        # CAD stuff
-        kicad
-        freecad
-        elmerfem
-
-        gimp
-        inkscape
-        decker
-        deja-dup
-        ungoogled-chromium
-    ]) ++
-        (with pkgs-unstable; [
-            themix-gui
-        ]) ++
-        (with pkgs-sc-update; [
-            supercollider-with-plugins
-
-        ])
-    ; # be sure to include another `++ (with <thing>; [ <your packages> ])` when you want to add packages from another channel
   };
-
-  # enable dconf (for wpgtk)
-  programs.dconf.enable = true;
-
-  # enable flatpak (for Logseq)
-  # services.flatpak.enable = true;
-
-  ## enable xbacklight (why wasn't this enabled at the start?)
-  # programs.xorg.xbacklight.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -161,74 +70,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    killall
-    xrandr
-    arandr
-    neovim
-    ranger
-    ueberzug
-    fish
-    curl
-    tmux
-    btop
-    networkmanagerapplet
-    wireguard-tools
-    adwaita-icon-theme
-    wpgtk
-    pywal16
-    xss-lock
-    atool
-    gzip
-    zip
-    unzip
-    qjackctl
     sops
-    devenv
-
-    # version control
-    git
-
-    # # c/c++
-    # gcc
-    # gdb
-
-    # i3
-    # i3lock
-    rofi
-    feh
-    # i3blocks
-    dunst
-    # i3status
-    # i3status-rust
-    # polybar
-
-    # pactl
-    pamixer
-    pavucontrol
-
-    brightnessctl
-    xbacklight
-
-    # evtest
-    xev
-
-    # xmodmap
-
-    # required to make i3 get the media keys and stuff---it's quite handy
-    xorg.xf86inputevdev
-
-    # i3 uses dex to run in its config file. I should check if that's necessary
-    # or not.
-    dex
-    
-    xarchiver
-    xclip
-
-    gparted
-    
-    # printing drivers
-    hplip
 
 
     # # for notes and stuff---i'm just trying to see if this will work, since it
@@ -247,14 +89,6 @@
   ];
   
 
-  programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
-
-  programs.direnv.enable = true;
-  programs.bash.interactiveShellInit =
-    ''
-    eval "$(direnv hook bash)"
-    '';
 
 
   # Some programs need SUID wrappers, can be configured further or are

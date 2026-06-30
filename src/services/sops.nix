@@ -9,6 +9,10 @@
       inputs.sops-nix.nixosModules.sops
     ];
 
+  environment.systemPackages = [
+    sops
+  ];
+
   sops.defaultSopsFile = ../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
   
