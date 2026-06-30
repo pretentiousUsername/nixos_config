@@ -17,6 +17,16 @@
     MANWIDTH = 80;
   };
 
+  fonts.fontconfig = {
+    antialias = true;
+    hinting = {
+      enable = true;
+      style = "slight";
+    };
+    subpixel.rgba = "rgb";
+  };
+
+  desktop.i3.enable = true;
 
   services.displayManager = {
     defaultSession = "none+i3";

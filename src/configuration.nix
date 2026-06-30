@@ -1,9 +1,4 @@
-
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-# Eventually I'll be using imports to make this a bit nicer to work with.
+# These are the default options for any given host---use them wisely.
 
 { config, pkgs, inputs, pkgs-unstable, pkgs-sc-update, specialArgs, options, modulesPath, ... }:
 
