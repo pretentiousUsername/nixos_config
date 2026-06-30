@@ -3,11 +3,9 @@
 { config, pkgs, inputs, pkgs-unstable, pkgs-sc-update, specialArgs, options, modulesPath, ... }:
 
 {
-  imports =
-    [
+  imports = [
       ./experimental.nix
-    ];
-
+  ];
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -25,6 +23,10 @@
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
+  };
+
+  environment.variables = {
+    MANWIDTH = 80;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
