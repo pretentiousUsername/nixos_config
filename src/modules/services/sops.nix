@@ -9,7 +9,7 @@
     system-services.sops.enable = lib.mkEnableOption "Enable SOPS service.";
   };
   
-  config = lib.mkIf config.sops.enable {
+  config = lib.mkIf config.system-services.sops.enable {
     environment.systemPackages = with pkgs; [
       sops
     ];
