@@ -11,10 +11,6 @@
   imports =
     [
       ./experimental.nix
-      inputs.musnix.nixosModules.musnix
-      ./services/sops.nix
-      ./services/sound.nix
-      ./packages/ld/ld.nix
     ];
 
 
@@ -50,4 +46,8 @@
   services.gvfs.enable = true;
 
   nix.settings.trusted-users = [ "root" "pines" ];
+
+  # Bootloader
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 }

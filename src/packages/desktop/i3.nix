@@ -23,8 +23,4 @@
 
   };
 
-  services.displayManager = {
-        defaultSession = "none+i3";
-        sddm.enable = false;
-  };
 }

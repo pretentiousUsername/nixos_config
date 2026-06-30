@@ -47,10 +47,10 @@
                 };
                 modules = [
                     inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
+                    inputs.nixos-hardware.nixosModules.hidpi
                     inputs.musnix.nixosModules.musnix
                     ./configuration.nix
                     ./hosts/superfluid/superfluid.nix
-                    ./programs/desktop/i3.nix
                 ];
             };
         };
