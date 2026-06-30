@@ -12,7 +12,7 @@
         # Lightdm and i3 do not get along for some reason.
         lightdm = {
           enable = true;
-          background = /home/pines/Pictures/Wallpapers/1678704649268102.png;
+          # background = /home/pines/Pictures/Wallpapers/1678704649268102.png;
           greeters.gtk = {
             enable = true;
           indicators = [
