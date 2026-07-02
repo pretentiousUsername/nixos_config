@@ -25,6 +25,16 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  fonts = {
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "Stix Two Text" ];
+        sansSerif = [ "Inter" ];
+        monospace = [ "JuliaMono Nerd Font" ];
+      };
+    };
+  };
+
   environment.variables = {
     MANWIDTH = 80;
   };

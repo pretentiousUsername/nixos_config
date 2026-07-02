@@ -49,7 +49,6 @@
                     inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
                     inputs.musnix.nixosModules.musnix
                     ./configuration.nix
-                    # ./modules
                     ./hosts/superfluid/configuration.nix
                     ./modules
                 ];

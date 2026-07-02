@@ -14,14 +14,5 @@
       vista-fonts
     ];
 
-    fonts = {
-      fontconfig = {
-        defaultFonts = {
-          serif = [ "Stix Two Text" ];
-          sansSerif = [ "Inter" ];
-          monospace = [ "JuliaMono Nerd Font" ];
-        };
-      };
-    };
   };
 }
