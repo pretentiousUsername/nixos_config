@@ -43,7 +43,7 @@
   users.users.pines = {
     isNormalUser = true;
     description = "pines";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "syncthing" ];
   };
 
   # Allow unfree packages

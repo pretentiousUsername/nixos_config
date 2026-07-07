@@ -33,7 +33,7 @@
       arandr
       xss-lock
       # required to make i3 get the media keys and stuff---it's quite handy
-      xorg.xf86inputevdev
+      xf86-input-evdev
       xclip
       xev
       xbacklight

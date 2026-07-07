@@ -14,11 +14,18 @@
       sops
     ];
 
-    sops.defaultSopsFile = ../secrets/secrets.yaml;
+    sops.defaultSopsFile = ../../secrets/secrets.yaml;
     sops.defaultSopsFormat = "yaml";
     
     sops.age.keyFile = "/home/pines/.config/sops/age/keys.txt";
 
+    sops.secrets."syncthing/username" = {
+      owner = "pines";
+    };
+
+    sops.secrets."syncthing/password" = {
+      owner = "pines";
+    };
     # Kept this in here by mistake, whoops! Anyways, this is copied from
     # VimJoyer's tutorial.
 
