@@ -4,7 +4,7 @@
 
 {
   imports = [
-      ./experimental.nix
+    ./experimental.nix
   ];
 
   # Set your time zone.

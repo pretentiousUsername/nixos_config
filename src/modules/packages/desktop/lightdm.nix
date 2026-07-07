@@ -11,7 +11,7 @@
       # background = /home/pines/Pictures/Wallpapers/1678704649268102.png;
       greeters.slick = {
         enable = true;
-        font.name = "Monospace 11";
+        font.name = "Serif 11";
         # font.package = pkgs.inter;
       };
     };

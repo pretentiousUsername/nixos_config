@@ -16,6 +16,12 @@
     _JAVA_OPTIONS = "-Dsun.java2d.uiscale=1.25";
   };
 
+  # services.syncthing.settings = {
+  #   # folders = {
+  #   #   "Music".devices = [ "phone" ];
+  #   # };
+  # };
+
   fonts.fontconfig = {
     antialias = true;
     hinting = {
@@ -29,6 +35,13 @@
 
   services.displayManager = {
     defaultSession = "none+i3";
+  };
+
+  system-services.syncthing.enable = true;
+  services.syncthing.settings.folders = {
+    "Music" = {
+      devices = [ "molecule" ];
+    };
   };
 
   # ALSA UCM prevents the microphone from working on Framework laptops for
