@@ -53,6 +53,21 @@
                     ./modules
                 ];
             };
+
+            kapitsa = nixpkgs.lib.nixosSystem {
+                specialArgs = {
+                    inherit inputs;
+                    inherit pkgs-unstable;
+                    inherit pkgs-sc-update;
+                };
+
+                modules = [
+                    inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
+                    inputs.musnix.nixosModules.musnix
+                    ./configuration.nix
+                    ./hosts/kapitsa/configuration.nix
+                    ./modules
+            };
         };
         # packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
 
