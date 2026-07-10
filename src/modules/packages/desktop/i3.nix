@@ -28,7 +28,6 @@
       enable = true;
       extraPackages = with pkgs; [
         i3status-rust
-        i3lock
         i3blocks
         i3status
         feh
@@ -36,5 +35,7 @@
         rofi
       ];
     };
+
+    programs.i3lock.enable = true;
   };
 }
