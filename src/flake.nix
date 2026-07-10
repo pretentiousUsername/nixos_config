@@ -67,6 +67,7 @@
                     ./configuration.nix
                     ./hosts/kapitsa/configuration.nix
                     ./modules
+                ];
             };
         };
         # packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
