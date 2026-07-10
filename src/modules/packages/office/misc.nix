@@ -18,6 +18,7 @@
       ghostscript
       poppler-utils
       libreoffice
+      notesnook
     ];
   };
 }
