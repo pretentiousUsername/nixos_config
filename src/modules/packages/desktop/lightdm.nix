@@ -11,8 +11,8 @@
       # background = /home/pines/Pictures/Wallpapers/1678704649268102.png;
       greeters.slick = {
         enable = true;
-        font.name = "Serif 11";
-        # font.package = pkgs.inter;
+        font.name = "Inter 11";
+        font.package = pkgs.inter;
       };
     };
   };

@@ -9,6 +9,8 @@
     users.users.pines.packages = with pkgs; [
       audacious
       mpv
+      rockbox-utility
+      nicotine-plus
       # cmus  # I *might* use this
     ];
   };
