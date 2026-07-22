@@ -35,7 +35,8 @@ upgrade() {
     git diff -U0 "*.nix"
     git add .
     echo "Rebuilding and upgrading NixOs."
-    sudo nixos-rebuild switch --upgrade -I nixos-config=src/configuration.nix \
+    nix flake update
+    sudo nixos-rebuild switch -I nixos-config=src/configuration.nix \
         --flake .\#$HOSTNAME \
         &>../nixos-switch.log || (cat ../nixos-switch.log | grep --color error && exit 1)
     
