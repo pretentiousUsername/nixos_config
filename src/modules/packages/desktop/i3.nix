@@ -22,6 +22,7 @@
       # i3 uses dex to run in its config file. I should check if that's necessary
       # or not.
       dex
+      xrandr
     ];
 
     services.xserver.windowManager.i3 = {
@@ -35,6 +36,8 @@
         rofi
       ];
     };
+
+    services.picom.enable = true;
 
     programs.i3lock.enable = true;
   };
