@@ -14,6 +14,7 @@
       ranger
       lxappearance
       gparted
+      deluge
     ];
   };
 }
