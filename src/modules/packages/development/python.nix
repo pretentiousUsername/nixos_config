@@ -6,8 +6,15 @@
   };
 
   config = lib.mkIf config.development.python.enable {
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = (with pkgs; [
       python3
-    ];
+      python3Pkgs.numpy
+    ]) ++
+    (with pkgs.python314Packages; [
+      numpy
+      scipy
+      matplotlib
+      jax
+    ]);
   };
 }
