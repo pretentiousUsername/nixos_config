@@ -37,6 +37,8 @@
     defaultSession = "none+i3";
   };
 
+  office.printing.enable = true;
+
   system-services.syncthing.enable = true;
   services.syncthing.settings.folders = {
     "Music" = {

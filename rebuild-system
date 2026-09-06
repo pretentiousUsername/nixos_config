@@ -59,7 +59,7 @@ collect_garbage() {
     sudo nix-collect-garbage
 }
 
-optimize () {
+optimize() {
     sudo nix-store --optimise
 }
 
