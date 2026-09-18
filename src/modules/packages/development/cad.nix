@@ -10,6 +10,7 @@
       kicad
       freecad
       elmerfem
+      qucs-s
     ];
   };
 }

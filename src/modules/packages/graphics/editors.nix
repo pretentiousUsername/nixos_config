@@ -12,6 +12,8 @@
       ffmpeg
       gimp
       inkscape
+      kdePackages.kdenlive
+      yt-dlp
     ];
   };
 }

@@ -11,6 +11,7 @@
       hyfetch  # yep
       btop
       thunar
+      p7zip
       ranger
       lxappearance
       gparted
