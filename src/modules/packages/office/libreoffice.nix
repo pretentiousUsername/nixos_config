@@ -2,7 +2,7 @@
 
 {
   options = {
-    office.misc.libreoffice = lib.mkEnableOption "Enable LibreOffice.";
+    office.libreoffice.enable = lib.mkEnableOption "Enable LibreOffice.";
   };
 
   config = lib.mkIf config.office.misc.enable {
