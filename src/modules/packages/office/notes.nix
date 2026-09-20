@@ -5,7 +5,7 @@
     office.notes.enable = lib.mkEnableOption "Enable note-taking stuff.";
   };
 
-  config = lib.mkIf config.office.misc.enable {
+  config = lib.mkIf config.office.notes.enable {
     users.users.pines.packages = with pkgs; [
       anytype
       zettlr 

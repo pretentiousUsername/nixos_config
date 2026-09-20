@@ -5,7 +5,7 @@
     office.libreoffice.enable = lib.mkEnableOption "Enable LibreOffice.";
   };
 
-  config = lib.mkIf config.office.misc.enable {
+  config = lib.mkIf config.office.libreoffice.enable {
     users.users.pines.packages = with pkgs; [
       libreoffice
     ];

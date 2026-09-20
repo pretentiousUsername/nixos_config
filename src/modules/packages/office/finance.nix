@@ -1,4 +1,3 @@
-
 { pkgs, config, lib, ... }:
 
 {
@@ -6,7 +5,7 @@
     office.finance.enable = lib.mkEnableOption "Enable finance stuff.";
   };
 
-  config = lib.mkIf config.office.misc.enable {
+  config = lib.mkIf config.office.finance.enable {
     users.users.pines.packages = with pkgs; [
       gnucash
     ];

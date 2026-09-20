@@ -5,7 +5,7 @@
     office.utils.enable = lib.mkEnableOption "Enable office utilities.";
   };
 
-  config = lib.mkIf config.office.misc.enable {
+  config = lib.mkIf config.office.utils.enable {
     users.users.pines.packages = with pkgs; [
       zathura
       deja-dup
