@@ -37,7 +37,14 @@
     defaultSession = "none+i3";
   };
 
-  office.printing.enable = true;
+  office = {
+    finance.enable = true;
+    libreoffice.enable = true;
+    notes.enable = true;
+    printing.enable = false;
+    typesetting.enable = true;
+    utils.enable = true;
+  };
 
   system-services.syncthing.enable = true;
   services.syncthing.settings.folders = {
