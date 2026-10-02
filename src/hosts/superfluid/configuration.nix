@@ -41,7 +41,7 @@
     finance.enable = true;
     libreoffice.enable = true;
     notes.enable = true;
-    printing.enable = false;
+    printing.enable = true;
     typesetting.enable = true;
     utils.enable = true;
   };

@@ -8,7 +8,8 @@
   config = lib.mkIf config.office.notes.enable {
     users.users.pines.packages = with pkgs; [
       anytype
-      zettlr 
+      zettlr
+      zotero
     ];
   };
 }
