@@ -10,6 +10,7 @@
       anytype
       zettlr
       zotero
+      rcu
     ];
   };
 }
