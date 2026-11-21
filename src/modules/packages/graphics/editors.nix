@@ -14,6 +14,7 @@
       inkscape
       kdePackages.kdenlive
       yt-dlp
+      loupe
     ];
   };
 }
